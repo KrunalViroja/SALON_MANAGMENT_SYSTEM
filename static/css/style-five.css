@@ -1,0 +1,4181 @@
+/*--------------------- Copyright (c) 2021 ----------------------- 
+[Master Stylesheet] 
+Project: Barber
+Version: 1.0.0 
+Author: Kamleshyadav
+ ------------------------------------------------------------------- 
+[Table of contents] 
+	1. Global CSS Start
+	2. Comman CSS Start
+    3. Preloader CSS Start
+    4. Header CSS Start
+    5. Banner CSS Start
+    6. Call To Action CSS Start
+    7. About CSS Start
+    8. Service CSS Start
+    9. Price CSS Start
+    10. Gallery CSS Start
+    11. Team CSS Start
+    12. Testimonial CSS Start
+    13. Blog CSS Start
+    14. Footer CSS Start
+    15. Responsive CSS Start
+-------------------------------------------------------------------*/
+
+
+/********************************************************
+    1. Global CSS
+*******************************************************/
+
+:root {
+    --main-gray-version: #d8d8d8;
+    --main-gray-version2: #e9e3e0;
+    --main-black: #000000;
+    --main-bg-color: #ffffff;
+    --main-txt-color: #414148;
+    --main-link-color: #222222;
+    --main-border-color: #ececec;
+    --main-gray-version3: #647589;
+    --main-gray-version19: #9fa9b4;
+    --main-gray-version25: #ece8e8;
+    --main-gray-version26: #3c3c3f;
+    --main-gray-version28: #68686a;
+    --main-gray-version29: #e8e8e8;
+    --main-gray-version30: #f6f6f6;
+    --main-gray-version32: #29292c;
+    --main-gray-version33: #f2f2f2;
+    --primary-color: #f2c05d;
+    --main-black7: #060607;
+    --ligt-overlay: rgba(0, 0, 23, 0.6);
+    --light-bg: #fff6f6;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    color: var(--main-txt-color);
+    background: var(--main-bg-color);
+}
+
+a,
+a:hover,
+a:focus,
+button,
+button:hover {
+    text-decoration: none;
+    color: var(--primary-color);
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.relative {
+    position: relative;
+}
+
+img {
+    max-width: 100%;
+}
+
+input,
+textarea,
+select,
+button,
+button:focus,
+button:hover,
+label,
+svg,
+svg path,
+svg rect,
+svg polygon,
+img,
+a,
+ :after,
+ :before,
+ :hover,
+ :focus,
+.form-control:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+ul,
+p {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+    text-transform: capitalize;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.padder0 {
+    padding: 0;
+}
+
+.mb-30 {
+    margin-bottom: 30px;
+}
+
+.mt-30 {
+    margin-top: 30px;
+}
+
+.mt-40 {
+    margin-top: 40px;
+}
+
+.mb-40 {
+    margin-bottom: 40px;
+}
+
+.mb-50 {
+    margin-bottom: 50px;
+}
+
+.mb-0 {
+    margin: 0;
+}
+
+.padder-right {
+    padding-right: 0;
+}
+
+.padder-left {
+    padding-left: 0;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+button {
+    cursor: pointer;
+}
+
+.display-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.nice-select .list {
+    width: 100%;
+}
+
+.map-bg {
+    background: var(--main-border-color);
+}
+
+.white {
+    color: var(--main-bg-color);
+}
+
+.fullWidth {
+    width: 100% !important;
+}
+
+iframe {
+    width: 100%;
+    border: none;
+}
+
+.hidden-div {
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+}
+
+.single-tab,
+.single-tab.hidden-div {
+    -webkit-transition: all 0.8s;
+    -moz-transition: all 0.8s;
+    -ms-transition: all 0.8s;
+    -o-transition: all 0.8s;
+    transition: all 0.8s;
+}
+
+.response {
+    color: var(--red);
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+}
+
+
+/********************************************************
+    2. Top Button CSS
+*******************************************************/
+
+#scroll {
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    -webkit-border-radius: 60px;
+    -moz-border-radius: 60px;
+    border-radius: 60px;
+    z-index: 9;
+    visibility: hidden;
+    -webkit-transform: translateY(150px);
+    -ms-transform: translateY(150px);
+    transform: translateY(150px);
+}
+
+#scroll.active {
+    visibility: visible;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+    animation: bounceInDown 2s;
+    -webkit-animation: bounceInDown 2s;
+    -moz-animation: bounceInDown 2s;
+}
+
+@keyframes bounce {
+    0%,
+    100% {
+        transform: translateY(-20px);
+    }
+    50% {
+        transform: translateY(0px);
+    }
+}
+
+
+/********************************************************
+    3. PreLoader CSS
+*******************************************************/
+
+.preloader-active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    z-index: 99999;
+}
+
+.preloader-active .preloader-holder {
+    position: absolute;
+    left: 0;
+    display: block;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 999999;
+}
+
+.preloader-active .preloader-holder .preloader span {
+    width: 50px;
+    height: 50px;
+    display: block;
+    border-radius: 50px;
+    position: absolute;
+    -webkit-animation: loadingCircles 1s infinite;
+    -moz-animation: loadingCircles 1s infinite;
+    animation: loadingCircles 1s infinite;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.preloader-wrapper>.preloader>span:nth-child(2) {
+    -webkit-animation-delay: 0.3s;
+    -moz-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+}
+
+.preloader-wrapper>.preloader>span:nth-child(3) {
+    -webkit-animation-delay: 0.6s;
+    -moz-animation-delay: 0.6s;
+    animation-delay: 0.6s;
+}
+
+.preloader-holder {
+    display: none;
+}
+
+.preloader-open {
+    position: fixed;
+    background-color: transparent;
+    z-index: 9999;
+    height: 100%;
+    width: 100%;
+    -webkit-transition: .2s all ease;
+    -o-transition: .2s all ease;
+    transition: .2s all ease;
+    -webkit-transition-delay: .5s;
+    -o-transition-delay: .5s;
+    transition-delay: .5s;
+}
+
+.preloader-open.loaded {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.preloader-open.loaded:before,
+.preloader-open.loaded:after {
+    width: 0%;
+}
+
+.preloader-open:before,
+.preloader-open:after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    -webkit-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+.preloader-open:before {
+    top: 0;
+    left: 0;
+}
+
+.preloader-open:after {
+    bottom: 0;
+    right: 0;
+}
+
+
+/********************************************************
+    4. Search CSS
+*******************************************************/
+
+.searchBox {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    width: 100%;
+    left: 0%;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 99;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    cursor: url(../images/index5/close-search.png), auto;
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+    transform: translateY(-100%);
+}
+
+.searchBox.show {
+    -webkit-transform: translateY(0%);
+    -moz-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    -o-transform: translateY(0%);
+    transform: translateY(0%);
+}
+
+.searchBox.show,
+.searchBox {
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.searchBoxContainer {
+    width: 50%;
+    position: relative;
+    text-align: end;
+    -webkit-transform: translateY(200px);
+    -moz-transform: translateY(200px);
+    -ms-transform: translateY(200px);
+    -o-transform: translateY(200px);
+    transform: translateY(200px);
+    visibility: hidden;
+}
+
+.searchBox.show .searchBoxContainer {
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    -o-transform: translateY(0px);
+    transform: translateY(0px);
+    visibility: visible;
+}
+
+.searchBox.show .searchBoxContainer,
+.searchBoxContainer {
+    -webkit-transition: all 2s;
+    -moz-transition: all 2s;
+    -ms-transition: all 2s;
+    -o-transition: all 2s;
+    transition: all 2s;
+}
+
+.search-bar-inner {
+    position: relative;
+    height: 50px;
+}
+
+.search-bar-inner input {
+    width: 100%;
+    height: 50px;
+    padding: 12px 55px 12px 0;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    border-bottom: 2px solid var(--main-bg-color);
+    color: var(--main-bg-color);
+}
+
+.search-bar-inner input::-webkit-input-placeholder {
+    color: var(--main-bg-color);
+    opacity: 90%;
+}
+
+.search-bar-inner input::-moz-placeholder {
+    color: var(--main-bg-color);
+    opacity: 90%;
+}
+
+.search-bar-inner input:-ms-input-placeholder {
+    color: var(--main-bg-color);
+    opacity: 90%;
+}
+
+.search-bar-inner input:-moz-placeholder {
+    color: var(--main-bg-color);
+    opacity: 90%;
+}
+
+.search-bar-inner button {
+    position: absolute;
+    right: 3px;
+    top: 3px;
+    bottom: 3px;
+    border: none;
+    background: transparent;
+    color: var(--main-bg-color);
+    width: 45px;
+    font-size: 20px;
+    border-radius: 26px;
+}
+
+.closeBtn {
+    margin: 0 0 20px 0;
+    display: inline-block;
+    padding: 0 15px;
+}
+
+.closeBtn svg {
+    width: 20px;
+    fill: var(--main-bg-color);
+}
+
+
+/********************************************************
+    5. Header CSS
+*******************************************************/
+
+.main-menu-parent {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.sal-header-wrapper .row {
+    align-items: center;
+}
+
+.main-menu-wrapper ul,
+.main-menu-wrapper li {
+    display: inline-block;
+    position: relative;
+}
+
+.main-menu-wrapper ul>li>a {
+    padding: 12px 20px;
+    display: inline-block;
+    font-weight: 400;
+}
+
+.main-menu-wrapper>ul>li {
+    position: relative;
+}
+
+
+/********************************************************
+    6. Responsive CSS
+*******************************************************/
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1170px;
+        padding: 0;
+    }
+    .closeBtn {
+        display: none;
+    }
+}
+
+@media (min-width: 991.98px) {
+    .menu-btn {
+        display: none;
+    }
+    ul.sub-menu {
+        position: absolute;
+        width: max-content;
+        min-width: 200px;
+        top: 60px;
+        left: 0;
+        z-index: 9;
+        transform: translate(20px, 0px);
+        transition: 0.3s;
+        opacity: 0;
+        visibility: hidden;
+        border: none;
+        border-radius: 0 0 10px 10px;
+        padding: 0 0 15px;
+        background: var(--main-bg-color);
+        box-shadow: 0px 6px 6px 0 rgba(0, 0, 0, 0.06);
+    }
+    ul.sub-menu li {
+        display: block;
+        text-align: left;
+        padding: 0;
+    }
+    ul.sub-menu li a {
+        display: block;
+        padding: 12px 20px 0;
+        overflow: hidden;
+        position: relative;
+    }
+    .main-menu-wrapper>ul>li:hover ul.sub-menu {
+        transform: translate(0px, 0px);
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+@media (max-width: 991.98px) {
+    body {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .menu-btn {
+        width: 50px;
+        height: 50px;
+        display: inline-block;
+        text-align: center;
+        line-height: 26px;
+        border: 1px solid transparent;
+        border-radius: 50%;
+        padding: 21px 0 16px 0;
+    }
+    .menu-btn span {
+        display: block;
+        width: 18px;
+        height: 2px;
+        transition: 0.3s;
+        margin: 0 auto 3px;
+        background: var(--main-link-color);
+    }
+    .menu-btn-wrap.open .menu-btn span:nth-child(2) {
+        opacity: 0;
+        visibility: hidden;
+    }
+    .menu-btn-wrap.open .menu-btn span:nth-child(1) {
+        transform: translate(0px, 4px) rotate(-48deg);
+    }
+    .menu-btn-wrap.open .menu-btn span:nth-child(3) {
+        transform: translate(0px, -6px) rotate(48deg);
+    }
+    .main-menu-wrapper {
+        position: fixed;
+        left: -300px;
+        top: 0;
+        bottom: 0;
+        width: 300px;
+        z-index: 999;
+        overflow: hidden;
+        overflow-y: auto;
+        background: var(--main-bg-color);
+        box-shadow: 2px 4px 28px 0px rgba( 0, 0, 0, 0.1);
+    }
+    .main-menu-wrapper.open {
+        left: 0;
+    }
+    .main-menu-wrapper,
+    .main-menu-wrapper.open {
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -ms-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s;
+    }
+    .main-menu-wrapper li {
+        width: 100%;
+        text-align: left;
+        padding-bottom: 15px;
+        border-bottom: 1px solid var(--main-border-color);
+    }
+    .main-menu-wrapper li.has-submenu {
+        padding-left: 0;
+    }
+    .main-menu-wrapper li.has-submenu>ul {
+        display: none;
+    }
+    .main-menu-wrapper li:last-child {
+        border: none;
+        padding-bottom: 0;
+    }
+    .main-menu-wrapper li>ul>li {
+        padding-left: 25px;
+    }
+    .main-menu-wrapper ul>li>a {
+        padding: 15px 20px 0px;
+        width: 100%;
+        color: var(--main-txt-color);
+    }
+    .main-menu-wrapper li.has-submenu:before,
+    .main-menu-wrapper li.has-submenu:after {
+        position: absolute;
+        bottom: 0;
+        content: '';
+    }
+    .main-menu-wrapper li.has-submenu:after {
+        right: 21px;
+        width: 12px;
+        height: 2px;
+        top: 25px;
+    }
+    .main-menu-wrapper li.has-submenu:before {
+        right: 26px;
+        width: 2px;
+        height: 12px;
+        top: 20px;
+    }
+    .main-menu-wrapper li.has-submenu.open::before {
+        content: unset;
+    }
+    .main-menu-wrapper::-webkit-scrollbar {
+        width: 3px;
+    }
+    .main-menu-wrapper::-webkit-scrollbar-track {
+        background-color: var(--main-border-color);
+    }
+    .main-menu-wrapper::-webkit-scrollbar-thumb {
+        background-color: var(--main-txt-color);
+    }
+}
+
+@media (max-width: 767.98px) {
+    .searchBoxContainer {
+        width: 80%;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .main-menu-wrapper {
+        left: -200px;
+        width: 200px;
+    }
+    .menu-btn {
+        padding: 10px 0 0;
+    }
+    .response {
+        position: unset;
+    }
+    .main-menu-parent {
+        justify-content: space-between;
+    }
+    .main-menu-parent .sal-search-wrap {
+        width: 100%;
+    }
+    .main-menu-parent .sal-search-wrap ul {
+        justify-content: space-between;
+    }
+}
+
+
+/********************************************************
+    2. Comman CSS Start
+********************************************************/
+
+.sal-color {
+    color: var(--primary-color);
+}
+
+.sal-btn,
+.sal-btn:hover {
+    font-size: 16px;
+    color: var(--main-bg-color);
+    line-height: 50px;
+    display: inline-block;
+    background: var(--primary-color);
+    text-transform: capitalize;
+    padding: 0px 12px;
+    position: relative;
+    min-width: 170px;
+    text-align: center;
+    min-height: 50px;
+    border: 0;
+    border-radius: 50px;
+}
+
+.sal-btn:hover {
+    background: var(--main-black);
+}
+
+.sal-btn:focus {
+    color: var(--white);
+}
+
+.sal-title {
+    font-size: 24px;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+.sal-heading-wrapper {
+    width: 56%;
+    margin: 0px auto 41px;
+}
+
+.sal-heading-wrapper h2 {
+    color: var(--main-link-color);
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.sal-heading {
+    font-size: 42px;
+    font-weight: 700;
+    position: relative;
+    padding: 0;
+    font-style: italic;
+    line-height: 50px;
+}
+
+.sal-subHeading {
+    color: var( --main-link-color);
+    font-size: 32px;
+    font-weight: 700;
+    position: relative;
+    padding: 0;
+    margin: 0 0 17px;
+    display: inline-block;
+    width: 100%;
+    line-height: 40px;
+}
+
+#scroll {
+    background: var(--primary-color);
+    color: var(--main-bg-color);
+}
+
+
+/********************************************************
+    3. Preloader CSS Start
+********************************************************/
+
+.preloader-active .preloader-holder {
+    background-color: var(--main-bg-color);
+}
+
+.preloader-active .preloader-holder .preloader span {
+    box-shadow: 0px 0px 0px 0px var(--primary-color);
+}
+
+@-webkit-keyframes loadingCircles {
+    0% {
+        -webkit-transform: scale(0);
+        opacity: 1;
+        box-shadow: 0px 0px 0px 10px var(--primary-color);
+    }
+    100% {
+        -webkit-transform: scale(1);
+        opacity: 0;
+        box-shadow: 0px 0px 0px 2px var(--primary-color);
+    }
+}
+
+@-moz-keyframes loadingCircles {
+    0% {
+        -moz-transform: scale(0);
+        opacity: 1;
+        box-shadow: 0px 0px 0px 10px var(--primary-color);
+    }
+    100% {
+        -moz-transform: scale(1);
+        opacity: 0;
+        box-shadow: 0px 0px 0px 2px var(--primary-color);
+    }
+}
+
+@keyframes loadingCircles {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+        box-shadow: 0px 0px 0px 10px var(--primary-color);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+        box-shadow: 0px 0px 0px 2px var(--primary-color);
+    }
+}
+
+.preloader-open:before,
+.preloader-open:after {
+    background-color: var(--main-bg-color);
+}
+
+
+/********************************************************
+    4. Header CSS Start
+********************************************************/
+
+.sal-header-wrapper {
+    padding: 20px 0;
+}
+
+.sal-search-wrap .sal-btn {
+    margin: 0px 0 0px 30px;
+    min-width: auto;
+    padding: 0 30px;
+}
+
+.searchBtn {
+    color: var(--main-text-color);
+    padding-left: 10px;
+}
+
+.searchBtn:focus,
+.searchBtn:hover {
+    color: var(--main-text-color);
+}
+
+.sal-search-wrap .display-flex {
+    align-items: center;
+}
+
+.sal-search-wrap .display-flex li {
+    display: flex;
+}
+
+
+/********************************************************
+    5. Banner CSS Start
+********************************************************/
+
+.sal-banner-section {
+    background-color: var(--main-border-color);
+    padding: 307px 0 229px;
+    position: relative;
+    color: var(--white);
+    font-size: 18px;
+}
+
+.sal-banner-section:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 23, 0.6);
+}
+
+.sal-banner-section.slide1 {
+    background-image: url(../images/index5/slide1.jpg);
+}
+
+.sal-banner-section.slide2 {
+    background-image: url(../images/index5/slide2.jpg);
+}
+
+.sal-banner-section.slide3 {
+    background-image: url(../images/index5/slide3.jpg);
+}
+
+.sal-banner-section.slide1,
+.sal-banner-section.slide2,
+.sal-banner-section.slide3 {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.sal-banner-text h1 {
+    font-size: 82px;
+    color: var(--main-bg-color);
+    font-weight: 700;
+    margin: 20px 0 26px;
+    line-height: 75px;
+}
+
+.sal-banner-text .sal-btn {
+    margin-top: 33px;
+}
+
+.sal-banner-wrapper .pagination {
+    position: absolute;
+    bottom: 54px;
+    z-index: 1;
+    width: 100%;
+    justify-content: center;
+}
+
+.sal-banner-wrapper .pagination .swiper-pagination-bullet {
+    border: 1px solid var(--main-gray-version28);
+    opacity: 1;
+    width: 12px;
+    height: 12px;
+    line-height: 20px;
+    display: inline-block;
+    border-radius: 50%;
+    margin: 0 6px;
+    background: transparent;
+    position: relative;
+}
+
+.sal-banner-wrapper .pagination .swiper-pagination-bullet:before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 1px;
+    right: 0px;
+    margin: auto;
+    border-radius: 50%;
+}
+
+.sal-banner-wrapper .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    border-color: var(--primary-color);
+}
+
+.sal-banner-wrapper .swiper-pagination-bullet.swiper-pagination-bullet-active:before {
+    background: var(--primary-color);
+}
+
+.sal-banner-wrapper .sal-title {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+    -webkit-transform: translateY(-20px);
+    -ms-transform: translateY(-20px);
+    transform: translateY(-20px);
+}
+
+.sal-banner-wrapper .swiper-slide-active .sal-title {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition-delay: 800ms;
+    -o-transition-delay: 800ms;
+    transition-delay: 800ms;
+    -webkit-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    transform: translateY(0px);
+}
+
+.sal-banner-wrapper h1 {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 800ms ease;
+    -o-transition: all 800ms ease;
+    transition: all 800ms ease;
+    -webkit-transform: translateX(-50px);
+    -ms-transform: translateX(-50px);
+    transform: translateX(-50px);
+}
+
+.sal-banner-wrapper .swiper-slide-active h1 {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition-delay: 1000ms;
+    -o-transition-delay: 1000ms;
+    transition-delay: 1000ms;
+    -webkit-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    transform: translateX(0px);
+}
+
+.sal-banner-wrapper p {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 800ms ease;
+    -o-transition: all 800ms ease;
+    transition: all 800ms ease;
+    -webkit-transform: translateX(-100px);
+    -ms-transform: translateX(-100px);
+    transform: translateX(-100px);
+}
+
+.sal-banner-wrapper .swiper-slide-active p {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition-delay: 1500ms;
+    -o-transition-delay: 1500ms;
+    transition-delay: 1500ms;
+    -webkit-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    transform: translateX(0px);
+}
+
+.sal-banner-wrapper .sal-btn {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 800ms ease;
+    -o-transition: all 800ms ease;
+    transition: all 800ms ease;
+    -webkit-transform: translateX(80px);
+    -ms-transform: translateX(80px);
+    transform: translateX(80px);
+}
+
+.sal-banner-wrapper .swiper-slide-active .sal-btn {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition-delay: 1000ms;
+    -o-transition-delay: 1000ms;
+    transition-delay: 1000ms;
+    -webkit-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    transform: translateX(0px);
+}
+
+
+/********************************************************
+    6. Call To Action CSS Start
+********************************************************/
+
+.sal-openTime-wrapper {
+    width: 100%;
+}
+
+.sal-contant-info-section {
+    position: relative;
+}
+
+.sal-contant-info-section>img {
+    object-fit: cover;
+    width: 100%;
+    min-height: 430px;
+}
+
+.sal-info-icon svg {
+    width: 25px;
+    height: 25px;
+    fill: var(--primary-color);
+}
+
+.sal-contant-info li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-bottom: 35px;
+}
+
+.sal-contant-info li:last-child {
+    margin-bottom: 0;
+}
+
+.sal-info-icon {
+    width: 50px;
+    margin-top: 8px;
+}
+
+.sal-info-text {
+    width: calc(100% - 50px);
+}
+
+.sal-contant-info-section.sal-info-center {
+    padding: 73px 15px 82px;
+    background: url(../images/index5/callNow-bg.png);
+    background-size: 85%;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.16);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sal-contant-info {
+    margin: auto;
+    width: 75%;
+}
+
+.sal-info-num {
+    display: inline-block;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 46px;
+}
+
+.sal-contant-info-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 15px;
+    text-align: center;
+    background: var(--light-bg);
+}
+
+.sal-contant-info-title h4 {
+    /* color: var(--main-bg-color); */
+    font-size: 24px;
+    font-weight: 700;
+    padding: 16px 0 14px;
+}
+
+.sal-contant-info-hover img {
+    object-fit: unset;
+    width: auto;
+}
+
+.sal-contant-info-hover {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    bottom: 30px;
+    right: 30px;
+    margin: auto;
+    background: var(--ligt-overlay);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.sal-contant-info-hover h4 {
+    color: var(--main-bg-color);
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.sal-service-info .sal-btn {
+    min-width: 150px;
+    margin: 5px 0 0;
+}
+
+.sal-service-info {
+    width: 100%;
+    display: inline-block;
+}
+
+.sal-service-info img {
+    margin: 24px 0 20px;
+    max-height: 50px;
+}
+
+.sal-contant-info-section:hover .sal-contant-info-title {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.sal-contant-info-section:hover .sal-contant-info-hover {
+    visibility: visible;
+    opacity: 1;
+}
+
+.sal-contant-info-section,
+.sal-contant-info-section:hover,
+.sal-contant-info-title,
+.sal-contant-info-hover {
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.sal-service-wrapper .sal-heading-wrapper {
+    margin-bottom: 43px;
+}
+
+
+/********************************************************
+    7. About CSS Start
+********************************************************/
+
+.sal-about-wrapper {
+    background: var(--main-bg-color);
+    padding: 80px 0 50px;
+}
+
+.sal-about-inner .PrevImg svg {
+    transform: rotate( 180deg);
+}
+
+.sal-about-detail {
+    width: 100%;
+    position: relative;
+    margin: 0 0;
+    max-width: 600px;
+}
+
+.about-contact-info {
+    box-shadow: 0 0 20px 0 rgb(0 0 0 / 08%);
+    padding: 24px 20px 18px;
+    margin: 0 0 30px;
+    background: var(--white);
+    border-bottom: 1px dotted var(--primary-color);
+}
+
+.sal-about-heading {
+    margin-bottom: 20px;
+}
+
+.sal-about-detail h1 {
+    font-size: 42px;
+    color: var(--main-link-color);
+    line-height: 54px;
+    margin: 5px 0 6px 0;
+}
+
+.sal-about-detail h5 {
+    font-size: 22px;
+    color: var(--main-link-color);
+    line-height: 30px;
+    font-weight: 700;
+}
+
+.sal-about-num {
+    font-size: 38px;
+    font-weight: 700;
+    margin-top: 8px;
+    display: inline-block;
+    line-height: 50px;
+}
+
+.aboutImg {
+    padding: 0 0px;
+    margin: 0 0 30px 0;
+    width: 100%;
+}
+
+.sal-about-button {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 9;
+}
+
+.sal-about-img img {
+    z-index: 1;
+    position: relative;
+}
+
+.sal-about-inner {
+    display: flex;
+    width: 100px;
+    justify-content: space-between;
+    background: var(--primary-color);
+}
+
+.sal-about-inner>div {
+    height: 50px;
+    width: 50px;
+}
+
+.sal-about-wrapper .sal-about-button>div>div {
+    width: 50px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+    line-height: 50px;
+    height: 50px;
+}
+
+.sal-about-wrapper .sal-about-button>div>div svg,
+.sal-about-wrapper .sal-about-button>div>div:hover svg {
+    fill: var(--white);
+}
+
+.NextImg {
+    text-align: right;
+}
+
+.sal-about-wrapper .sal-about-button>div>div svg {
+    width: 20px;
+    margin: 20px 0 0;
+}
+
+.PrevImg:before {
+    right: 2px;
+}
+
+.NextImg:before {
+    left: 2px;
+}
+
+.sal-about-inner .NextImg {
+    border-left: 1px solid rgb(255 255 255 / 20%);
+}
+
+.sal-about-wrapper .sal-about-button>div>div:hover svg,
+.sal-about-wrapper .sal-about-button>div>div svg,
+.sal-about-wrapper .sal-about-button>div>div,
+.sal-about-wrapper .sal-about-button>div>div:hover {
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+
+/********************************************************
+    8. Service CSS Start
+********************************************************/
+
+.sal-service-wrapper {
+    position: relative;
+    background: url(../images/index5/service-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    padding: 69px 0 0;
+}
+
+.sal-service-wrapper:before {
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    background: rgba(0, 0, 23, 0.6);
+}
+
+.sal-service-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 30px;
+    background: rgba(255, 255, 255, 0.06);
+    padding: 40px 30px 36px;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.sal-service-text {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 27px 0 0;
+}
+
+.sal-service-icon {
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+}
+
+.sal-service-text>a {
+    font-size: 22px;
+    display: inline-block;
+    color: var(--main-bg-color);
+}
+
+.sal-service-icon span {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    z-index: 1;
+    background: transparent;
+    border-radius: 50%;
+    line-height: 100px;
+    padding: 20px 0;
+    text-align: center;
+    border: 2px dotted var(--main-border-color);
+}
+
+.sal-service-icon span:after {
+    content: "";
+    position: absolute;
+    top: -8px;
+    bottom: -8px;
+    left: -8px;
+    right: -8px;
+    margin: auto;
+    width: auto;
+    height: auto;
+    border-radius: 100%;
+    border: 2px dotted var(--main-border-color);
+    z-index: -1;
+    transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+    -o-transition: all .3s ease-out;
+    -webkit-transition: all .3s ease-out;
+    -ms-transition: all .3s ease-out;
+}
+
+.sal-service-section:hover .sal-service-icon span:after {
+    animation: rotate-animation 10s infinite linear;
+}
+
+@keyframes rotate-animation {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.sal-service-icon svg {
+    fill: var(--main-bg-color);
+    height: 50px;
+    width: 50px;
+}
+
+.sal-service-holder {
+    padding: 0 0 0 120px;
+    position: relative;
+}
+
+.sal-service-section:hover {
+    background: var(--primary-color);
+}
+
+.sal-service-text:hover a {
+    color: var(--white);
+}
+
+.sal-service-text,
+.sal-service-text:hover,
+.sal-service-text a,
+.sal-service-text:hover a,
+.sal-service-section,
+.sal-service-section:hover {
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.sal-service-holder {
+    margin-bottom: 98px;
+}
+
+.sal-service-wrapper .container-fluid .row {
+    align-items: flex-end;
+}
+
+.sal-service-wrapper .sal-heading-wrapper h2,
+.sal-service-wrapper .sal-heading-wrapper p {
+    color: var(--main-bg-color);
+}
+
+
+/********************************************************
+    9. Price CSS Start
+********************************************************/
+
+.sal-price-wrapper {
+    background: var(--main-bg-color);
+    padding: 69px 0 39px;
+    background: url(../images/index5/about-shape.png);
+    background-position: center left;
+    background-size: auto;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 100%;
+    display: inline-block;
+}
+
+.sal-pricing-section {
+    border: 10px solid var(--main-gray-version33);
+    padding: 40px 40px 3px;
+    background: var(--main-bg-color);
+    margin: 2px 0 30px 0;
+}
+
+.sal-pricing-title h4 {
+    color: var(--main-link-color);
+    font-size: 22px;
+    padding-right: 100px;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.sal-pricing-title .sal-price {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-weight: 700;
+    color: var(--primary-color);
+    font-size: 22px;
+}
+
+.sal-pricing-list {
+    display: inline-block;
+    width: 100%;
+    border-bottom: 2px dotted var(--main-border-color);
+    margin-bottom: 24px;
+    padding-bottom: 23px;
+    padding-left: 100px;
+}
+
+.sal-pricing-list:last-of-type {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.sal-price-wrapper .container-fluid .row {
+    align-items: center;
+}
+
+.sal-price-wrapper.sal-about-page-price {
+    padding: 71px 0 50px;
+}
+
+.sal-pricing-list {
+    position: relative;
+}
+
+.ser-pri-icon {
+    width: 60px;
+    display: flex;
+    height: 60px;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    text-align: center;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.ser-pri-icon svg {
+    fill: var(--primary-color);
+    height: 40px;
+}
+
+.ser-pri-icon:before {
+    border: 2px dotted var(--primary-color);
+    border-radius: 50%;
+    content: "";
+    position: absolute;
+    top: -8px;
+    bottom: -8px;
+    left: -8px;
+    right: -8px;
+    margin: auto;
+    width: auto;
+    height: auto;
+    transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+    -o-transition: all .3s ease-out;
+    -webkit-transition: all .3s ease-out;
+    -ms-transition: all .3s ease-out;
+}
+
+.sal-pricing-list:hover,
+.sal-pricing-list,
+.ser-pri-icon:before,
+.sal-pricing-list:hover .ser-pri-icon:before,
+.sal-pricing-list:hover .sal-pricing-title h4,
+.sal-pricing-title h4 {
+    transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+    -o-transition: all .3s ease-out;
+    -webkit-transition: all .3s ease-out;
+    -ms-transition: all .3s ease-out;
+}
+
+.sal-pricing-list:hover .ser-pri-icon:before {
+    opacity: 1;
+    animation: rotate-animation 10s infinite linear;
+    border-color: var(--primary-color);
+}
+
+.sal-pricing-list:hover .ser-pri-icon svg {
+    fill: var(--primary-color);
+}
+
+.sal-pricing-list:hover .sal-pricing-title h4 {
+    color: var(--primary-color);
+}
+
+
+/********************************************************
+    10. Gallery CSS Start
+********************************************************/
+
+.sal-gallery-wrapper {
+    background: var(--main-bg-color);
+    padding: 72px 0 50px;
+}
+
+.sal-porfolio-section {
+    position: relative;
+    margin: 0 0 30px;
+    width: 100%;
+}
+
+.sal-porfolio-section img {
+    width: 100%;
+}
+
+.sal-overlay {
+    position: absolute;
+    display: flex;
+    right: 0;
+    left: 0;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    bottom: 0;
+    background: rgba(0, 0, 23, 0.6);
+    padding: 10px;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1;
+}
+
+.sal-overlay a {
+    position: relative;
+    z-index: 1;
+    font-size: 20px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    background: rgb(255 255 255 / 24%);
+    text-align: center;
+    border-radius: 50%;
+    color: var(--white);
+}
+
+.sal-porfolio-section:hover .sal-overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+.sal-porfolio-section:hover,
+.sal-porfolio-section,
+.sal-porfolio-section .sal-overlay,
+.sal-porfolio-section:hover .sal-overlay {
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.sal-gallery-slides {
+    width: 100%;
+    display: inline-block;
+}
+
+.saloonSlider .row {
+    margin: 0;
+}
+
+.sal-gallery-section {
+    display: inline-block;
+    width: 20%;
+}
+
+.sal-gallery-wrapper .sal-heading-wrapper {
+    margin: 0px auto 43px;
+}
+
+.slideBullets {
+    width: 100%;
+    text-align: center;
+    margin-top: 38px;
+}
+
+.slideBullets .swiper-pagination-bullet {
+    border: 1px solid var(--main-gray-version28);
+    opacity: 1;
+    width: 12px;
+    height: 12px;
+    line-height: 20px;
+    display: inline-block;
+    border-radius: 0;
+    margin: 0 6px;
+    background: transparent;
+    position: relative;
+}
+
+.slideBullets .swiper-pagination-bullet:before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 1px;
+    right: 0px;
+    margin: auto;
+}
+
+.slideBullets .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    border-color: var(--primary-color);
+}
+
+.slideBullets .swiper-pagination-bullet.swiper-pagination-bullet-active:before {
+    background: var(--primary-color);
+}
+
+
+/* Call to action  */
+
+.sal-service-wrapper.call-to-actions {
+    padding: 72px 0 37px;
+}
+
+.sal-service-wrapper.call-to-actions h2 {
+    margin: 0 0 10px;
+    font-size: 60px;
+}
+
+.sal-service-wrapper.call-to-actions p {
+    font-size: 22px;
+    font-weight: 500;
+    margin: 0 0 20px;
+}
+
+
+/********************************************************
+    11. Team CSS Start
+********************************************************/
+
+.sal-team-wrapper {
+    padding: 72px 0 43px;
+}
+
+.sal-team-wrapper .sal-heading-wrapper {
+    margin-bottom: 43px;
+}
+
+.sal-team-section {
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.sal-team-hover {
+    position: absolute;
+    top: 20px;
+    bottom: 20px;
+    right: 20px;
+    left: 20px;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.80);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.sal-team-inner {
+    position: relative;
+    z-index: 1;
+}
+
+.sal-team-info h4 {
+    font-size: 26px;
+}
+
+.sal-team-info a {
+    display: inline-block;
+    color: var(--main-bg-color);
+    font-size: 20px;
+    margin: 12px 0 49px;
+}
+
+.sal-team-social {
+    margin: 50px 0 0;
+}
+
+.sal-team-social ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.sal-team-social ul li {
+    margin: 0 8px;
+}
+
+.sal-team-social ul li a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    line-height: 44px;
+    background: var(--ligt-overlay);
+    border: none;
+    border-radius: 50%;
+    text-align: center;
+    color: var(--white);
+}
+
+.sal-team-social ul li a:hover {
+    color: var(--white);
+    background: var(--primary-color);
+}
+
+.sal-team-img {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+}
+
+.sal-team-img img {
+    width: 100%;
+    max-height: 360px;
+    object-fit: cover;
+    object-position: top;
+}
+
+.sal-team-identity {
+    font-size: 16px;
+    padding: 22px 0 0;
+}
+
+.sal-team-identity h4 {
+    color: var(--main-link-color);
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 38px;
+}
+
+.sal-team-section:hover .sal-team-hover {
+    opacity: 1;
+    visibility: visible;
+}
+
+.sal-team-section,
+.sal-team-section:hover,
+.sal-team-section .sal-team-hover,
+.sal-team-section:hover .sal-team-hover {
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.sal-team-wrapper.sal-team-page-wrapper {
+    padding: 69px 0 43px;
+}
+
+
+/********************************************************
+    12. Testimonial CSS Start
+********************************************************/
+
+.sal-testimonial-wrapper {
+    background: url(../images/index5/page-titil-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 100%;
+    padding: 69px 0 80px;
+    color: var(--main-gray-version25);
+}
+
+.sal-testimonial-wrapper:before {
+    content: "";
+    position: absolute;
+    background: rgba(0, 0, 23, 0.6);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.sal-testimonial-wrapper .sal-heading-wrapper h2,
+.sal-testimonial-wrapper .sal-heading-wrapper p {
+    color: var(--main-bg-color);
+}
+
+.sal-testimonials-section {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 50px 80px 44px;
+    max-width: 850px;
+    margin: auto;
+}
+
+.sal-client-img {
+    display: flex;
+    align-items: center;
+}
+
+.sal-client-img img {
+    margin: 0 15px 0 0;
+    border: 1px solid var(--primary-color);
+    border-radius: 50%;
+    height: 90px;
+    width: 90px;
+    object-fit: cover;
+}
+
+.sal-client-quote {
+    text-align: left;
+}
+
+.sal-testimonial-section {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.sal-client-quote h4 {
+    color: var(--main-bg-color);
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.sal-testimonial-section>p {
+    margin-bottom: 26px;
+}
+
+.testimonialBullets {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.testimonialBullets .swiper-pagination-bullet {
+    border: 1px solid var(--main-gray-version28);
+    opacity: 1;
+    width: 12px;
+    height: 12px;
+    line-height: 20px;
+    display: inline-block;
+    border-radius: 50%;
+    margin: 0 6px;
+    background: transparent;
+    position: relative;
+}
+
+.testimonialBullets .swiper-pagination-bullet:before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    position: absolute;
+    border-radius: 50%;
+    left: 0;
+    top: 1px;
+    bottom: 1px;
+    right: 0px;
+    margin: auto;
+}
+
+.testimonialBullets .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    border-color: var(--primary-color);
+}
+
+.testimonialBullets .swiper-pagination-bullet.swiper-pagination-bullet-active:before {
+    background: var(--primary-color);
+}
+
+.sal-testimonial-wrapper .sal-heading-wrapper {
+    margin-bottom: 43px;
+}
+
+.sal-testimonial-button {
+    width: 100%;
+    margin: auto;
+    position: absolute;
+    display: inline-block;
+    margin-top: 0;
+    top: 30px;
+    right: 0;
+    left: 0;
+    text-align: center;
+    z-index: 2;
+}
+
+.sal-testimonial-inner {
+    display: flex;
+    width: 42%;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.sal-testimonial-button>div>div {
+    width: 30px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+}
+
+.sal-testimonial-button>div>div svg {
+    fill: var(--main-gray-version19);
+}
+
+.sal-testimonial-button>div>div:hover svg {
+    fill: var(--primary-color);
+}
+
+.sal-testimonial-button>div>div:hover {
+    width: 45px;
+}
+
+.testNextButton {
+    text-align: right;
+}
+
+.sal-testimonial-button>div>div:before {
+    content: "";
+    background: var(--primary-color);
+    width: 14px;
+    position: absolute;
+    height: 2px;
+    border: none;
+    top: 14px;
+    border-radius: 6px;
+    opacity: 0;
+}
+
+.sal-testimonial-button>div>div.testPrevButton:hover {
+    text-align: left;
+}
+
+.sal-testimonial-button>div>div:hover:before {
+    opacity: .8;
+}
+
+.sal-testimonial-button>div>div svg {
+    width: 30px;
+    height: 20px;
+}
+
+.testPrevButton:before {
+    right: 2px;
+}
+
+.testNextButton:before {
+    left: 2px;
+}
+
+.sal-testimonial-button>div>div:before,
+.sal-testimonial-button>div>div:hover:before,
+.sal-testimonial-button>div>div:hover svg,
+.sal-testimonial-button>div>div svg,
+.sal-about-wrapper .sal-about-button>div>div,
+.sal-about-wrapper .sal-about-button>div>div:hover {
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+
+/********************************************************
+    13. Couunt Down CSS Start
+********************************************************/
+
+.sal-countdown {
+    display: inline-block;
+    text-align: center;
+    font-size: 30px;
+    width: 100%;
+    margin: 10px 0 30px;
+}
+
+.sal-countdown>div {
+    padding: 10px;
+    border-radius: 3px;
+    background: rgb(255 255 255 / 25%);
+    display: inline-block;
+    margin: 0 0 10px;
+}
+
+.sal-countdown div>span {
+    padding: 10px 20px 0;
+    border-radius: 3px;
+    display: inline-block;
+    color: var(--white);
+    font-weight: 600;
+}
+
+.smalltext {
+    font-size: 12px;
+    margin: 5px 0 0;
+    color: var(--white);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+
+/********************************************************
+    13. Blog CSS Start
+********************************************************/
+
+.sal-blog-wrapper {
+    width: 100%;
+    display: inline-block;
+    padding: 80px 0 71px;
+}
+
+.sal-blog-wrapper .row {
+    align-items: center;
+}
+
+.sal-blog-info {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 24px 0 3px;
+}
+
+.sal-blog-img img {
+    width: 100%;
+}
+
+.sal-blog-info li {
+    position: relative;
+    padding-left: 8px;
+    margin-left: 8px;
+}
+
+.sal-blog-info li a {
+    color: var(--primary-color);
+}
+
+.sal-blog-info li a span {
+    color: var(--main-txt-color);
+}
+
+.sal-blog-info li:first-child {
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.sal-blog-info li:first-child:before {
+    content: unset;
+}
+
+.sal-blog-info li:before {
+    content: "";
+    position: absolute;
+    background: var(--primary-color);
+    width: 3px;
+    height: 3px;
+    border: none;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+}
+
+.sal-blog-button {
+    width: 100%;
+    margin: auto;
+    position: relative;
+    display: inline-block;
+    margin-top: 8px;
+    padding: 0;
+}
+
+.sal-blog-inner {
+    display: flex;
+    width: 80px;
+    justify-content: space-between;
+}
+
+.sal-blog-button>div>div {
+    width: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    height: 20px;
+}
+
+.sal-blog-button>div>div svg {
+    fill: var(--main-gray-version19);
+}
+
+.sal-blog-button>div>div:hover svg {
+    fill: var(--primary-color);
+}
+
+.sal-blog-button>div>div:hover {
+    width: 35px;
+}
+
+.blogNextButton {
+    text-align: right;
+}
+
+.sal-blog-button>div>div:before {
+    content: "";
+    background: var(--primary-color);
+    width: 15px;
+    position: absolute;
+    height: 2px;
+    border: none;
+    top: 14px;
+    border-radius: 6px;
+    opacity: 0;
+}
+
+.sal-blog-button>div>div:hover:before {
+    opacity: .5;
+}
+
+.sal-blog-button>div>div svg {
+    width: 20px;
+    height: 20px;
+}
+
+.blogPrevButton:before {
+    right: 2px;
+}
+
+.blogNextButton:before {
+    left: 2px;
+}
+
+.sal-blog-button>div>div:before,
+.sal-blog-button>div>div:hover:before,
+.sal-blog-button>div>div:hover svg,
+.sal-about-button>div>div svg,
+.sal-about-button>div>div,
+.sal-about-button>div>div:hover,
+.sal-blog-title:hover,
+.sal-blog-title {
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.sal-blog-title {
+    color: var( --main-link-color);
+    font-size: 28px;
+    font-weight: 500;
+    position: relative;
+    padding: 0;
+    margin: 6px 0 0;
+    display: inline-block;
+    width: 100%;
+    line-height: 40px;
+}
+
+.sal-blog-title:hover {
+    color: var(--primary-color);
+}
+
+
+/********************************************************
+    14. Footer CSS Start
+********************************************************/
+
+.sal-footer-main-wrapper {
+    background: #000000;
+    background: url(../images/index5/footer-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 100%;
+    padding: 80px 0 0;
+    display: inline-block;
+    color: var(--main-gray-version25);
+}
+
+.sal-widgets h4 {
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: var(--main-bg-color);
+}
+
+.newsletter-wrap {
+    position: relative;
+    margin: 6px 0 12px;
+}
+
+.newsletter-wrap input {
+    background: rgba(255, 255, 255, 0.1);
+    width: 100%;
+    position: relative;
+    height: 50px;
+    padding: 0 70px 0 20px;
+    border: none;
+    color: var(--main-bg-color);
+    line-height: 50px;
+}
+
+.newsletter-wrap input::-webkit-input-placeholder {
+    color: var(--main-txt-color);
+}
+
+.newsletter-wrap input::-moz-placeholder {
+    color: var(--main-txt-color);
+}
+
+.newsletter-wrap input:-ms-input-placeholder {
+    color: var(--main-txt-color);
+}
+
+.newsletter-wrap input:-moz-placeholder {
+    color: var(--main-txt-color);
+}
+
+.newsletter-wrap button {
+    background: var(--primary-color);
+    border: none;
+    color: var(--main-bg-color);
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 50px;
+}
+
+.sal-widgets h6 {
+    font-size: 18px;
+    color: var(--main-bg-color);
+}
+
+.sal-widgets h5 {
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 40px;
+    color: var(--main-bg-color);
+}
+
+.sal-widgets ul li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 5px;
+}
+
+.sal-widgets ul li:before {
+    position: absolute;
+    left: 0;
+    content: "";
+    width: 10px;
+    height: 2px;
+    border: none;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    background: var(--primary-color);
+}
+
+.sal-widgets ul li a {
+    color: var(--main-gray-version25);
+    position: relative;
+}
+
+.sal-widgets ul li a:hover {
+    color: var(--primary-color);
+}
+
+.sal-widgets ul li a:hover:after {
+    background: var(--primary-color);
+}
+
+.sal-widgets ul li a:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background: var(--primary-color);
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    width: 0%;
+    margin: auto;
+    left: 0;
+}
+
+.sal-widgets ul li a:hover:after {
+    width: 100%;
+    opacity: 1;
+}
+
+.sal-widgets ul li a:hover:after,
+.sal-widgets ul li a:after,
+.sal-widgets ul li:before,
+.sal-widgets ul li:hover:before,
+.sal-widgets-contact span:hover,
+.sal-widgets-contact span,
+.sal-widgets-contact span:hover svg,
+.sal-widgets-contact span svg {
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.sal-widgets-contact span:hover {
+    background: var(--primary-color);
+}
+
+.sal-widgets-contact span:hover svg {
+    fill: var(--main-bg-color);
+}
+
+.sal-widgets-contact h4 {
+    font-weight: 700;
+    font-size: 28px;
+    margin-bottom: 8px;
+    color: var(--main-bg-color);
+}
+
+.footer-information {
+    border-bottom: 4px double rgb(255 255 255 / 8%);
+    padding: 0 0 13px;
+    margin: 0 0 44px;
+}
+
+.sal-widgets-contact span {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    background: rgba(255, 255, 255, 0.10);
+    border: none;
+    border-radius: 50%;
+    padding: 16px 0;
+    margin-bottom: 22px;
+}
+
+.sal-widgets-contact span svg {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    fill: var(--primary-color);
+}
+
+.sal-widgets-contact a {
+    color: var(--main-gray-version25);
+    display: inline-block;
+    width: 100%;
+}
+
+.sal-copyright-wrapper {
+    padding: 14px 0 13px;
+    color: var(--main-paint-footer);
+    position: relative;
+    margin-top: 43px;
+    background: var(--main-gray-version32);
+}
+
+.sal-copyright-wrapper a {
+    color: var(--primary-color);
+}
+
+.sal-footer-address .sal-team-social {
+    margin: 20px 0 0;
+}
+
+.sal-footer-address .sal-team-social li {
+    padding: 0;
+    margin: 0 8px;
+}
+
+.sal-footer-address .sal-team-social li:before,
+.sal-footer-address .sal-team-social li a:before,
+.sal-footer-address .sal-team-social li a:after {
+    content: unset;
+}
+
+.sal-footer-address .sal-team-social li a:hover,
+.sal-footer-address .sal-team-social li:hover a {
+    color: var(--white);
+}
+
+.sal-footer-address .sal-team-social ul {
+    justify-content: flex-start;
+}
+
+.sal-footer-address .sal-team-social ul li:first-child {
+    margin-left: 0;
+}
+
+.sal-footer-address .sal-team-social ul a {
+    background: rgb(255 255 255 / 13%);
+}
+
+.sal-footer-address form {
+    margin: 0 0 20px;
+    display: inline-block;
+    width: 100%;
+}
+
+.sal-widgets h4 {
+    position: relative;
+    font-weight: 700;
+    padding: 0 0 10px;
+}
+
+.sal-widgets h4:before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background: var(--primary-color);
+    bottom: 0;
+    width: 100px;
+    left: 0;
+}
+
+.sal-contact-img img {
+    max-height: 547px;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+/********************************************************
+	17. Page Title Start
+*******************************************************/
+
+.page-title-wrapper {
+    position: relative;
+    background: url(../images/index5/page-titil-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    padding: 119px 0 124px 0;
+    color: var(--main-bg-color);
+}
+
+.page-title-wrapper:before {
+    content: "";
+    background: rgba(0, 0, 23, 0.6);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    opacity: 0.9;
+}
+
+.page-title-text h1 {
+    color: var(--main-bg-color);
+    font-size: 38px;
+    line-height: 46px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.page-title-text ul {
+    display: flex;
+    justify-content: center;
+}
+
+.page-title-text ul>li {
+    position: relative;
+    padding-left: 20px;
+}
+
+.page-title-text ul>li:first-child {
+    padding-left: 0;
+}
+
+.page-title-text ul>li:before {
+    content: "//";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 6px;
+}
+
+.page-title-text ul>li:first-child:before {
+    content: unset;
+}
+
+.page-title-text ul>li a {
+    color: var(--main-bg-color);
+}
+
+
+/********************************************************
+	17. Partner Page Start
+*******************************************************/
+
+.sal-partner-wrapper {
+    padding: 80px 0;
+}
+
+
+/********************************************************
+	17. Team Page Start
+*******************************************************/
+
+
+/********************************************************
+	17. Contact Page CSS Start
+********************************************************/
+
+.sal-contact-wrapper {
+    background: var(--main-bg-color);
+    padding: 80px 0 50px;
+}
+
+.sal-contact-from {
+    width: 100%;
+    margin: auto;
+    background: var(--main-bg-color);
+    box-shadow: 0 0 100px 0 rgba(0, 0, 0, 0.08);
+    padding: 44px 50px 50px;
+}
+
+.sal-contact-from .sal-title {
+    margin-bottom: 26px;
+}
+
+.sal-inputField {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.sal-inputField input,
+.sal-inputField textarea {
+    width: 100%;
+    padding: 0 60px 0 20px;
+    height: 50px;
+    box-shadow: inset 0 0 10px 0 rgba(194, 71, 96, 0.03);
+    border: 1px solid var(--main-gray-version);
+}
+
+.sal-inputField input:focus,
+.sal-inputField textarea:focus {
+    border-color: var(--primary-color);
+}
+
+.sal-inputField input:focus,
+.sal-inputField textarea:focus,
+.sal-inputField input,
+.sal-inputField textarea {
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.sal-inputField i {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    bottom: 0;
+    margin: auto;
+    color: var(--main-border-color);
+    line-height: 50px;
+}
+
+.sal-inputField textarea {
+    padding: 15px 60px 15px 20px;
+    height: 150px;
+}
+
+.sal-contact-from .sal-btn {
+    margin: 1px 0 0 0;
+    border: none;
+}
+
+.sal-contact-from .sal-btn:hover:before {
+    background: var(--main-black);
+}
+
+
+/********************************************************
+	17. Work CSS Start
+********************************************************/
+
+.sal-work-wrapper {
+    overflow: hidden;
+    padding: 69px 0 50px;
+}
+
+.sal-work-wrapper .sal-heading-wrapper {
+    margin: 0px auto 37px;
+}
+
+.work-porfolio-section {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.work-porfolio-section img {
+    width: 100%;
+    border: none;
+    max-height: 300px;
+    min-height: 300px;
+    object-fit: cover;
+}
+
+.work-filter-menu {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.work-filter-menu button {
+    border: 1px solid var(--primary-color);
+    background: var(--main-bg-color);
+    margin: 6px 6px;
+    padding: 6px 20px;
+}
+
+.work-filter-menu button.active,
+.work-filter-menu button:hover {
+    background: var(--primary-color);
+    color: var(--main-bg-color);
+}
+
+.work-filter-menu button,
+.work-filter-menu button.active,
+.work-filter-menu button:hover {
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.work-filter .mix {
+    display: none;
+}
+
+.work-overlay {
+    position: absolute;
+    width: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.80);
+    opacity: 0;
+}
+
+.work-overlay ul {
+    text-align: center;
+    top: calc(50%);
+    position: relative;
+    -webkit-transition: translateY(-50%);
+    -moz-transition: translateY(-50%);
+    -ms-transition: translateY(-50%);
+    -o-transition: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.work-overlay ul li {
+    display: inline-block;
+    margin: 0 6px;
+}
+
+.work-overlay ul li a {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    color: var(--main-bg-color);
+    line-height: 30px;
+}
+
+.work-overlay ul li a span {
+    display: inline-block;
+    font-size: 20px;
+}
+
+.work-overlay ul li a:hover {
+    color: var(--primary-color);
+}
+
+.work-porfolio-section:hover .work-overlay {
+    opacity: 1;
+}
+
+.work-overlay ul li a,
+.work-overlay ul li a:hover,
+.work-porfolio-section,
+.work-porfolio-section .work-overlay,
+.work-porfolio-section:hover .work-overlay {
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+
+/********************************************************
+	22. Blog Page Start
+*******************************************************/
+
+.blogPage-wrapper {
+    padding: 80px 0 80px;
+}
+
+.sideBarWidgets {
+    margin-bottom: 42px;
+}
+
+.sideBarWidgets:last-child {
+    margin-bottom: 0px;
+}
+
+.blogSidebar,
+.sideBarWidgets {
+    width: 100%;
+}
+
+.blogSearchWrapper {
+    position: relative;
+}
+
+.blogSearchWrapper input {
+    width: 100%;
+    border: 1px solid #e6e6e6;
+    height: 50px;
+    border-radius: 6px;
+    padding: 0 50px 0 30px;
+    position: relative;
+    line-height: 50px;
+    margin-bottom: 4px;
+}
+
+.blogSearchWrapper>a {
+    position: absolute;
+    right: 18px;
+    top: 0;
+    color: var(--primary-color);
+    bottom: 0;
+    line-height: 50px;
+}
+
+.sideBarWidgets .blogPageTitle {
+    padding-bottom: 10px;
+    margin-bottom: 16px;
+    font-weight: 700;
+    font-size: 22px;
+    text-transform: capitalize;
+}
+
+.blogPageThumb img {
+    border: none;
+    border-radius: 3px;
+}
+
+.blogPageTitleWrapper {
+    width: calc(100% - 80px);
+}
+
+.blogPageSubTitle {
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.blogDate {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.blogMainImg,
+.blogPageThumb {
+    position: relative;
+    overflow: hidden;
+}
+
+.blogMainImg img {
+    border: none;
+    width: 100%;
+}
+
+.blogMainImg:after,
+.blogMainImg:before,
+.blogPageThumb:after,
+.blogPageThumb:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    z-index: 1;
+    background: var(--main-bg-color);
+    -webkit-transition: all .5s linear;
+    -moz-transition: all .5s linear;
+    -ms-transition: all .5s linear;
+    -o-transition: all .5s linear;
+    transition: all .5s linear;
+}
+
+.blogMainImg:before,
+.blogMainImg:hover:before,
+.blogPageThumb:before,
+.blogPageThumb:hover:before {
+    right: 0;
+    top: 0;
+}
+
+.blogMainImg:hover:after,
+.blogMainImg:hover:before,
+.blogPageThumb:hover:after,
+.blogPageThumb:hover:before {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.blogMainImg:after,
+.blogMainImg:hover:after,
+.blogPageThumb:after,
+.blogPageThumb:hover:after {
+    left: 0;
+    bottom: 0;
+}
+
+.blogMainImg:after,
+.blogPageThumb:after {
+    opacity: .3;
+}
+
+.blogPageInfo ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.blogPageInfo ul li {
+    margin-right: 60px;
+}
+
+.blogPageInfo ul li:last-child {
+    margin-right: 0px;
+}
+
+.blogPageInfo {
+    padding: 30px 0 21px;
+}
+
+.blogPageInfo ul li img.blogUser,
+.blogPageInfo ul li i {
+    margin-right: 10px;
+}
+
+.blogPageInfo ul li .blogUser-name,
+.blogPageInfo ul li i {
+    color: var(--primary-color);
+}
+
+img.blogUser {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+}
+
+.blogPageInfo ul li a {
+    color: var(--main-txt-color);
+}
+
+.blogPageInfo ul li a:hover {
+    color: var(--primary-color);
+}
+
+.blogHeading {
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 46px;
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+.blogBtn {
+    margin-top: 21px;
+}
+
+.blogSection {
+    margin-bottom: 50px;
+}
+
+.blogPaginationWrapper ul li {
+    display: inline-block;
+    font-size: 18px;
+}
+
+.blogPaginationWrapper ul li a,
+.blogPaginationWrapper ul li.dot:hover a {
+    color: var(--main-link-color);
+    font-weight: 700;
+    width: 40px;
+    height: 40px;
+    line-height: 42px;
+    display: inline-block;
+    text-align: center;
+    background: var(--main-bg-color);
+}
+
+.blogPaginationWrapper ul li.dot:hover a {
+    cursor: none;
+}
+
+.blogPaginationWrapper ul li.blogPagePrev a,
+.blogPaginationWrapper ul li.blogPageNext a {
+    width: auto;
+    height: 40px;
+}
+
+.blogPaginationWrapper ul li.blogPagePrev:hover a,
+.blogPaginationWrapper ul li.blogPageNext:hover a {
+    background: var(--main-bg-color);
+    color: var(--primary-color);
+}
+
+.blogPaginationWrapper ul li.active a,
+.blogPaginationWrapper ul li:hover a {
+    color: var(--main-bg-color);
+    background: var(--primary-color);
+}
+
+
+/********************************************************
+	23. Blog Single Page Start
+*******************************************************/
+
+.blogPage-wrapper.blogPageSingleWrapper {
+    padding: 80px 0 80px;
+}
+
+.blogPageBlockquote {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.blogPageBlockquote-img {
+    width: 160px;
+    margin-right: 10px;
+    position: relative;
+}
+
+.blogBlockquoteQuate {
+    width: calc(100% - 170px);
+    color: var(--main-link-color);
+    position: relative;
+    text-align: center;
+}
+
+.blogBlockquoteQuate p,
+.blogQuateUser {
+    text-align: left;
+}
+
+.blogPageBlockquote-img img.blogQuateUser {
+    border: 3px solid var(--primary-color);
+    border-radius: 50%;
+    width: 130px;
+    height: 130px;
+}
+
+.blogPageBlockquote-img:before {
+    content: "\f10e";
+    right: 12px;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+    color: var(--primary-color);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    line-height: 32px;
+    background: var(--main-bg-color);
+    border: 5px solid var(--primary-color);
+    padding-left: 8px;
+    border-radius: 100%;
+}
+
+.blogQuateUser {
+    color: var(--main-link-color);
+    font-weight: 700;
+    font-size: 20px;
+    width: 100%;
+    display: inline-block;
+}
+
+.blogQuateUser>span {
+    color: var(--main-txt-color);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.blogBlockquoteQuate:before {
+    content: "\f10e";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+    right: 0;
+    font-size: 2%;
+    margin: auto;
+}
+
+.blogBlockquoteQuate:before {
+    content: "\f10e";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+    right: 0;
+    font-size: 84px;
+    margin: auto;
+    top: 50%;
+    opacity: .1;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+
+.blogImgTextContainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.blogImgTextContainer img {
+    width: 370px;
+    display: inline-block;
+    margin: 6px 15px 6px 0;
+}
+
+.blogImgTextContainer p {
+    display: inline-block;
+    width: calc(100% - 385px);
+}
+
+.blogAuthoreMessageBox {
+    background: var(--primary-color);
+    border: none;
+    border-radius: 0;
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 71px 0 71px;
+    color: var(--main-bg-color);
+}
+
+.blogAuthoreContent h5 {
+    color: var(--main-bg-color);
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.blogAuthoreContent h5 span {
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.blogAuthoreContent {
+    width: calc(100% - 140px);
+}
+
+.blogAuthoreImg {
+    width: 110px;
+    height: 110px;
+    overflow: hidden;
+    margin-right: 30px;
+}
+
+.blogAuthoreImg img {
+    width: 110px;
+    height: 110px;
+    border: none;
+    border-radius: 100%;
+    object-fit: fill;
+}
+
+.blogCommentHolder {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.blogCmntDetail {
+    width: calc(100% - 130px);
+}
+
+.blogCmntUser {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    margin-right: 30px;
+}
+
+.blogCmntUser img {
+    width: 100px;
+    height: 100px;
+    border: none;
+    border-radius: 100%;
+    object-fit: fill;
+}
+
+.blogCommnets>ul>li {
+    margin-bottom: 26px;
+    display: inline-block;
+}
+
+.blogCommnets ul li ul {
+    padding-left: 80px;
+}
+
+.blogCommnets>ul>li>ul>li {
+    margin-top: 26px;
+}
+
+.blogPageCommentForm {
+    margin-top: 43px;
+}
+
+.blogInputFieldInner {
+    width: 100%;
+    border: 1px solid var(--main-border-color);
+    padding: 0 20px;
+    height: 50px;
+    border-radius: 0;
+    display: flex;
+}
+
+textarea.blogInputFieldInner {
+    height: 150px;
+    resize: none;
+    padding: 12px 20px;
+}
+
+.blogInputField {
+    margin-bottom: 30px;
+}
+
+.blogPageCommentForm .blogSectionHeading {
+    margin-bottom: 40px;
+}
+
+.blogPageCommentForm .theme-btn {
+    margin: 0;
+}
+
+.blogCmntReply {
+    color: var(--primary-color);
+    margin-left: 15px;
+}
+
+.blogCmntReply svg {
+    width: 16px;
+    fill: var(--primary-color);
+}
+
+.blogDivider {
+    margin: 22px 0;
+    display: block;
+}
+
+a.pnt-btn.blogBtn {
+    background: var(--primary-color);
+    color: var(--main-bg-color);
+}
+
+.blogPaginationWrapper {
+    text-align: center;
+}
+
+.blogSectionHeading {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0 0 26px;
+}
+
+
+/********************************************************
+	15. Calender CSS Start
+********************************************************/
+
+.modal-header .modal-title {
+    color: var(--main-link-color);
+    font-size: 22px;
+    font-weight: 700;
+}
+
+
+/* Calender Widgets Style */
+
+.calender-wrapper,
+.date-calender {
+    width: 100%;
+}
+
+.date-calender .datepicker {
+    width: 100%;
+    padding: 0;
+}
+
+.datepicker .datepicker-switch:hover,
+.datepicker .next:hover,
+.datepicker .prev:hover,
+.datepicker tfoot tr th:hover {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+.date-calender .datepicker table {
+    border-collapse: separate;
+    border-spacing: 5px 5px;
+    width: 100%;
+}
+
+.datepicker table tr td.day.focused,
+.datepicker table tr td.day:hover {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+.datepicker table tr td.active.active {
+    background-color: var(--primary-color);
+    background-image: none;
+    border: 2px solid var(--primary-color);
+    color: var(--white);
+}
+
+.datepicker table tr td {
+    border: 2px solid transparent;
+}
+
+.datepicker table tr td.active.day {
+    background-color: transparent;
+    background-image: none;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.date-calender .datepicker th.datepicker-switch,
+.date-calender .datepicker th.datepicker-switch:hover {
+    background: transparent !important;
+    color: var(--primary-color);
+}
+
+.datepicker table tr td.active.disabled,
+.datepicker table tr td.active.disabled.active,
+.datepicker table tr td.active.disabled.disabled,
+.datepicker table tr td.active.disabled:active,
+.datepicker table tr td.active.disabled:hover,
+.datepicker table tr td.active.disabled:hover.active,
+.datepicker table tr td.active.disabled:hover.disabled,
+.datepicker table tr td.active.disabled:hover:active,
+.datepicker table tr td.active.disabled:hover:hover,
+.datepicker table tr td.active.disabled:hover[disabled],
+.datepicker table tr td.active.disabled[disabled],
+.datepicker table tr td.active:active,
+.datepicker table tr td.active:hover,
+.datepicker table tr td.active:hover.active,
+.datepicker table tr td.active:hover.disabled,
+.datepicker table tr td.active:hover:active,
+.datepicker table tr td.active:hover:hover,
+.datepicker table tr td.active:hover[disabled],
+.datepicker table tr td.active[disabled] {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.datepicker table tr td span.active.active,
+.datepicker table tr td span.active.disabled,
+.datepicker table tr td span.active.disabled.active,
+.datepicker table tr td span.active.disabled.disabled,
+.datepicker table tr td span.active.disabled:active,
+.datepicker table tr td span.active.disabled:hover,
+.datepicker table tr td span.active.disabled:hover.active,
+.datepicker table tr td span.active.disabled:hover.disabled,
+.datepicker table tr td span.active.disabled:hover:active,
+.datepicker table tr td span.active.disabled:hover:hover,
+.datepicker table tr td span.active.disabled:hover[disabled],
+.datepicker table tr td span.active.disabled[disabled],
+.datepicker table tr td span.active:active,
+.datepicker table tr td span.active:hover,
+.datepicker table tr td span.active:hover.active,
+.datepicker table tr td span.active:hover.disabled,
+.datepicker table tr td span.active:hover:active,
+.datepicker table tr td span.active:hover:hover,
+.datepicker table tr td span.active:hover[disabled],
+.datepicker table tr td span.active[disabled] {
+    background-color: transparent;
+}
+
+.datepicker table tr td span,
+.datepicker table tr td span.disabled,
+.datepicker table tr td span.disabled:hover,
+.datepicker table tr td span:hover {
+    border: 2px solid transparent;
+}
+
+.datepicker table tr td span.focused,
+.datepicker table tr td span:hover {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+.datepicker table tr td span.active.focused,
+.datepicker table tr td span.active,
+.datepicker table tr td span.active.disabled,
+.datepicker table tr td span.active.disabled:hover,
+.datepicker table tr td span.active:hover {
+    background-color: var(--primary-color);
+    background-image: unset;
+    background-image: unset;
+    background-image: unset;
+    background-image: unset;
+    background-image: unset;
+    background-image: unset;
+    border-color: var(--primary-color);
+    border-color: var(--primary-color);
+    background: transparent;
+    color: var(--primary-color);
+}
+
+.datepicker td {
+    padding: 8px 0px;
+}
+
+.datepicker th {
+    padding: 13px 0;
+}
+
+.datepicker table tr td.today,
+.datepicker table tr td.today.disabled,
+.datepicker table tr td.today.disabled:hover,
+.datepicker table tr td.today:hover {
+    background-color: transparent;
+    background-image: unset;
+    background-image: unset;
+    background-image: unset;
+    background-image: unset;
+    background-image: unset;
+    background-image: unset;
+    border-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.modal-footer {
+    justify-content: space-between;
+}
+
+.black-btn {
+    background: var(--main-black);
+}
+
+.black-btn:hover {
+    background: var(--primary-color);
+}
+
+.calender-form .nice-selection {
+    width: 100%;
+    margin: 0 0 30px;
+}
+
+.calender-form .nice-selection {
+    width: 100%;
+    margin: 0 0 30px;
+    border-radius: 0;
+    border-color: var(--main-gray-version);
+}
+
+.nice-select .list {
+    max-height: 200px;
+    overflow: auto;
+}
+
+
+/********************************************************
+	15. Responsive CSS Start
+********************************************************/
+
+@media (min-width: 992px) {
+    .sal-about-wrapper .col-lg-5 {
+        -ms-flex: 0 0 44.444%;
+        flex: 0 0 44.444%;
+        max-width: 44.444%;
+    }
+    .sal-about-wrapper .col-lg-7 {
+        -ms-flex: 0 0 55.444%;
+        flex: 0 0 55.444%;
+        max-width: 55.444%;
+    }
+}
+
+@media (min-width: 991.98px) {
+    .main-menu-wrapper ul>li>a {
+        padding: 10px 0;
+        color: var(--main-txt-color);
+        position: relative;
+    }
+    .main-menu-wrapper ul>li {
+        padding: 0 20px 0;
+    }
+    .main-menu-wrapper>ul>li>a:hover:before,
+    .main-menu-wrapper>ul>li.active>a:before {
+        left: 0;
+        right: 0;
+    }
+    .main-menu-wrapper>ul>li>a:hover:after,
+    .main-menu-wrapper>ul>li>a:hover:before,
+    .main-menu-wrapper>ul>li.active>a:after,
+    .main-menu-wrapper>ul>li.active>a:before {
+        opacity: 1;
+        visibility: visible;
+    }
+    .main-menu-wrapper>ul>li>a:before {
+        position: absolute;
+        content: "";
+        height: 3px;
+        background: var(--primary-color);
+        margin: auto;
+        left: 20px;
+        right: 20px;
+        bottom: 0;
+        opacity: 0;
+        visibility: hidden;
+        border-radius: 30px;
+    }
+    .main-menu-wrapper>ul>li>a,
+    .main-menu-wrapper>ul>li>a:before,
+    .main-menu-wrapper>ul>li>a:hover:before {
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -ms-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s;
+    }
+    .main-menu-wrapper ul.sub-menu {
+        background: var(--main-link-color);
+        top: 65px;
+    }
+    .main-menu-wrapper ul>li ul.sub-menu li a {
+        padding: 15px 20px 0;
+    }
+}
+
+@media (min-width: 1799.98px) {
+    .sal-header-wrapper .container-fluid,
+    .sal-footer-main-wrapper .container-fluid,
+    .sal-banner-wrapper .container-fluid {
+        max-width: 1756px;
+    }
+}
+
+@media (min-width: 1700px) {
+    .sal-price-wrapper .container-fluid,
+    .sal-team-wrapper .container-fluid {
+        max-width: 1680px;
+    }
+    .sal-blog-head {
+        padding-left: 25%;
+    }
+}
+
+@media (max-width: 1799.98px) {
+    .sal-contant-info {
+        width: 85%;
+    }
+    .sal-widgets h5,
+    .sal-team-info h4,
+    .sal-service-text>a {
+        font-size: 20px;
+    }
+    .sal-about-detail {
+        width: 100%;
+    }
+	.sal-banner-wrapper .container-fluid {
+		max-width: 90%;
+		margin: auto;
+	}
+	.sal-banner-section {
+		padding: 159px 0 129px;
+	}
+}
+
+@media (max-width: 1699.98px) {
+    .sal-widgets h5,
+    .sal-team-info h4,
+    .sal-service-text>a {
+        font-size: 18px;
+    }
+    .sal-service-holder {
+        padding: 0 0 0 80px;
+    }
+    .sal-service-holder.sal-service-right .sal-service-text {
+        padding: 0 0 0 70px;
+    }
+    .sal-service-holder.sal-service-right {
+        padding: 0 80px 0 0;
+    }
+    .sal-service-icon svg {
+        height: 40px;
+        width: 40px;
+    }
+    .sal-contant-info {
+        width: 90%;
+    }
+    .sal-widgets-contact h4,
+    .sal-blog-title,
+    .sal-team-identity h4 {
+        font-size: 20px;
+    }
+    .sal-blog-info {
+        font-size: 14px;
+    }
+    .sal-blog-info li {
+        padding-left: 6px;
+        margin-left: 6px;
+    }
+}
+
+@media (max-width: 1440px) {
+    .sal-heading-wrapper h2,
+    .sal-contant-info-hover h4,
+    .sal-contant-info-title h4 {
+        font-size: 20px;
+    }
+    .sal-subHeading {
+        font-size: 28px;
+    }
+    .sal-contant-info-section.sal-info-center {
+        padding: 43px 15px 52px;
+    }
+    .sal-btn,
+    .sal-btn:hover {
+        min-width: 150px;
+        font-size: 14px;
+    }
+    .sal-team-hover,
+    .sal-overlay,
+    .sal-contant-info-hover {
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+    }
+}
+
+@media (max-width: 1440px) and (min-width: 1200px) {
+    .sal-contant-info-hover .sal-btn.left-skew {
+        padding: 0px 15px 0px 0px;
+        text-align: right;
+    }
+    .sal-contant-info-hover .sal-btn {
+        padding: 0 0 0 15px;
+        text-align: left;
+    }
+}
+
+@media (max-width: 1199.98px) and (min-width: 992px) { 
+	.main-menu-wrapper ul>li {
+		padding: 0 15px 0;
+	}
+}
+
+@media (max-width: 1199.98px) {
+    .sal-blog-head {
+        padding: 0 0 30px;
+    }
+    .sal-service-holder,
+    .sal-service-holder.sal-service-right {
+        padding: 0;
+    }
+    .sal-service-section {
+        margin-bottom: 50px;
+    }
+    .sal-banner-section {
+		padding: 159px 0 129px;
+	}
+	.sal-banner-text p {
+		max-width: 440px;
+	}
+    .sal-banner-text h1 {
+        font-size: 52px;
+        line-height: 55px;
+    }
+    .sal-openTime-wrapper .container-fluid {
+        max-width: 650px;
+    }
+    .sal-openTime-wrapper .col-xl-4:last-child .sal-contant-info-section {
+        margin: 0;
+    }
+    .sal-contant-info-section {
+        margin-bottom: 30px;
+    }
+    .sal-about-detail h1 {
+        font-size: 32px;
+        line-height: 34px;
+    }
+    .sal-title {
+        font-size: 18px;
+        letter-spacing: 3px;
+    }
+    .sal-about-detail h5,
+    .sal-widgets h4,
+    .sal-pricing-title .sal-price {
+        font-size: 18px;
+    }
+    .sal-about-num {
+        font-size: 28px;
+        line-height: 40px;
+    }
+    .sal-heading-wrapper {
+        width: 85%;
+    }
+    .sal-testimonial-inner {
+        width: 100%;
+    }
+    .sal-testimonial-button>div>div:before {
+        top: 14px;
+    }
+    .sal-widgets-contact h4,
+    .sal-blog-title,
+    .sal-team-identity h4 {
+        font-size: 18px;
+        line-height: 30px;
+    }
+}
+
+@media (max-width: 1199.98px) and (min-width: 992px) {
+    .main-menu-wrapper ul>li>a {
+        padding: 8px 0 18px;
+    }
+    .sal-header-wrapper {
+        padding: 15px 0;
+    }
+    .sal-about-detail {
+        margin: 0;
+    }
+    .sal-about-wrapper .row {
+        align-items: center;
+    }
+    .sal-about-wrapper {
+        padding: 76px 0 74px;
+    }
+    .sal-service-wrapper {
+        padding: 71px 0 0;
+    }
+    .sal-service-holder {
+        margin-bottom: 80px;
+    }
+    .sal-price-wrapper {
+        padding: 71px 0 41px;
+    }
+    .sal-testimonial-wrapper {
+        padding: 71px 0 80px;
+    }
+    .sal-copyright-wrapper {
+        margin-top: 43px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .main-menu-wrapper li.has-submenu:before,
+    .main-menu-wrapper li.has-submenu:after {
+        background: var(--primary-color);
+    }
+    .sal-search-wrap .sal-btn {
+        margin: 0px 0 0px 20px;
+    }
+    .sal-widgets-contact span {
+        width: 80px;
+        height: 80px;
+        line-height: 80px;
+    }
+    .sal-widgets-contact span svg {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+    }
+    .sal-about-wrapper .col-lg-7 {
+        flex-direction: column-reverse;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .sal-about-wrapper .sal-about-button {
+        margin: 0 0 5px;
+    }
+    .sal-pricing-section {
+        width: 85%;
+        margin: 2px auto 30px;
+    }
+    .sal-testimonials-section {
+        padding: 50px 40px 44px;
+    }
+    .sal-testimonial-button>div>div:before {
+        top: 10px;
+    }
+    .sal-blog-wrapper .col-12.padder-right {
+        padding-right: 15px;
+    }
+    .menu-btn {
+        height: 40px;
+        margin-top: 12px;
+        background: var(--primary-color);
+        width: 40px;
+        padding: 13px 0;
+        margin: 0 0 0 20px;
+        border-radius: 50%;
+    }
+    .menu-btn span {
+        background: var(--main-bg-color);
+    }
+    .sal-banner-section {
+        padding: 129px 0 129px;
+    }
+    .sal-about-detail {
+        margin: 0 0;
+    }
+    .sal-about-wrapper {
+        padding: 80px 0 75px;
+    }
+    .sal-service-wrapper {
+        padding: 71px 0 0;
+    }
+    .sal-service-holder {
+        margin-bottom: 87px;
+    }
+    .sal-service-holder.sal-service-left {
+        margin-bottom: 57px;
+    }
+    .sal-service-wrapper .sal-heading-wrapper {
+        margin-bottom: 10px;
+    }
+    .sal-price-wrapper {
+        padding: 71px 0 41px;
+    }
+    .slideBullets {
+        margin-top: 40px;
+    }
+    .sal-team-wrapper {
+        padding: 72px 0 50px;
+    }
+    .sal-testimonial-wrapper {
+        padding: 71px 0 80px;
+    }
+    .sal-blog-wrapper {
+        padding: 71px 0 72px;
+    }
+    .sal-copyright-wrapper {
+        margin-top: 42px;
+    }
+    .sal-team-section {
+        margin-bottom: 26px;
+    }
+    .page-title-wrapper {
+        padding: 89px 0 94px 0;
+    }
+    .searchBtn {
+        height: 40px;
+        margin-top: 12px;
+        background: var(--primary-color);
+        width: 40px;
+        padding: 8px 0;
+        margin: 0;
+        border-radius: 50%;
+        text-align: center;
+        color: var(--white);
+    }
+}
+
+@media (max-width: 767.98px) {
+    .sal-gallery-section {
+        width: 50%;
+    }
+    .sal-gallery-slides .sal-gallery-section:last-child {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .sal-gallery-slides .sal-gallery-section:last-child .sal-porfolio-section {
+        width: 50%;
+    }
+    .sal-info-num {
+        font-size: 28px;
+        line-height: 36px;
+    }
+    .sal-about-wrapper {
+        padding: 80px 0 76px;
+    }
+    .sal-contant-info-section.sal-info-center {
+        padding: 43px 0 52px;
+    }
+    .blogImgTextContainer img {
+        margin: 15px 0;
+        width: 100%;
+    }
+    .blogImgTextContainer p {
+        width: 100%;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .sal-testimonials-section {
+        padding: 50px 20px 44px;
+    }
+    .sal-client-img img {
+        margin: 0 0 15px 0;
+    }
+    .sal-client-quote {
+        width: 100%;
+        text-align: center;
+    }
+    .sal-client-img {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .sal-pricing-title h4 {
+        font-size: 18px;
+        width: 100%;
+        padding-right: 0;
+    }
+    .sal-pricing-title .sal-price {
+        position: relative;
+        font-size: 18px;
+        margin: 6px 0;
+    }
+    .sal-pricing-section {
+        width: 95%;
+        padding: 40px 20px 3px;
+    }
+    .sal-gallery-slides .sal-gallery-section:last-child .sal-porfolio-section,
+    .sal-gallery-section {
+        width: 100%;
+    }
+    .sal-banner-wrapper .pagination {
+        bottom: 52px;
+    }
+    .sal-banner-text {
+        text-align: center;
+    }
+    .sal-service-text a {
+        font-size: 18px;
+        line-height: 26px;
+    }
+    .blogBlockquoteQuate,
+    .blogAuthoreContent,
+    .blogCmntDetail {
+        width: 100%;
+        margin: 15px 0 0;
+    }
+    .blogPageInfo ul li {
+        width: 100%;
+        margin: 10px 0 0;
+    }
+    .sal-search-wrap .sal-btn {
+        margin: 0px 0 0px 0px;
+        padding: 0 10px;
+    }
+    .menu-btn {
+        margin: 0 0 0;
+    }
+    body .sal-pricing-list {
+        padding-left: 60px;
+    }
+    body .ser-pri-icon {
+        width: 30px;
+        height: 30px;
+    }
+    body .ser-pri-icon svg {
+        height: 20px;
+    }
+	.searchBtn {
+		padding: 10px 0;
+	}
+}
+
+.sal-heading-wrapper svg {
+    height: 40px;
+    fill: var(--primary-color);
+}
+
+.sal-heading-wrapper span {
+    display: block;
+}
+
+.sal-icons {
+    fill: var(--primary-color)
+}
+
+
+/*-------------colorpicker css start ------------------*/
+
+#style-switcher {
+    background: none repeat scroll 0 0 #FFFFFF;
+    box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.08);
+    left: -159px;
+    position: fixed;
+    top: 25%;
+    width: 160px;
+    z-index: 9999;
+}
+
+#style-switcher div {
+    padding: 5px 9px;
+    float: left;
+}
+
+ul.colors {
+    list-style: none outside none;
+    margin: 0 0 10px;
+    overflow: hidden;
+    padding: 0;
+}
+
+ul.colors li {
+    float: left;
+    margin: 2px;
+}
+
+ul.colors li #color {
+    background: #847e4a;
+}
+
+ul.colors li #color2 {
+    background: #ee4852;
+}
+
+ul.colors li #color3 {
+    background: #bb9453;
+}
+
+ul.colors li #color4 {
+    background: #F79F81;
+}
+
+ul.colors li #color5 {
+    background: #336699;
+}
+
+ul.colors li #style-five {
+    background: #f2c05d;
+}
+
+ul.colors li p {
+    cursor: pointer;
+    display: block;
+    height: 35px;
+    width: 35px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    font-size: 0px;
+}
+
+#style-switcher .bottom {
+    background: none repeat scroll 0 0 #FFFFFF;
+    color: #252525;
+    padding: 0;
+}
+
+#style-switcher .bottom a.settings {
+    background: none repeat scroll 0 0 #FFFFFF;
+    box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.08);
+    display: block;
+    height: 41px;
+    position: absolute;
+    right: -40px;
+    bottom: 0;
+    width: 40px;
+    padding: 3px;
+    line-height: 40px;
+    /* font-size: 32px; */
+    font-size: 28px;
+    text-align: center;
+    color: #000;
+}
+
+#style-switcher .bottom a.settings i {
+    color: var(--primary-color);
+}
+
+#style-switcher .bottom a.settings:hover {
+    text-decoration: none;
+}
+
+#style-switcher>div>h3 {
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: 400;
+    text-align: center;
+}
+
+#style-switcher>div>select {
+    width: 90%;
+}

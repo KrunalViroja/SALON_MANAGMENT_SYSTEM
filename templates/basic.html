@@ -1,0 +1,405 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, 1shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+    <link rel="stylesheet" href="{%static 'css/font_awesome.css' %}">
+    <link rel="stylesheet" href="{%static 'css/swiper.min.css' %}">
+    <link rel="stylesheet" href="{%static 'css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{%static 'css/bootstrap-datepicker.min.css' %}">
+    <link rel="stylesheet" href="{%static 'css/nice-select.css' %}">
+    <link rel="stylesheet" href="{%static 'css/style-five.css' %}">
+    <link rel="stylesheet" id="theme-change" type="text/css" href="#">
+
+    <link rel="shortcut icon" type="image/ico" href="{%static 'images/index5/favicon.png' %}" />
+    <title>Trend Salon</title>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+
+
+<body>
+    <!-- Preloader Box -->
+    <div class="preloader-wrapper preloader-active preloader-open">
+        <div class="preloader-holder">
+            <div class="preloader d-flex justify-content-center align-items-center h-100">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Search Box -->
+    <div class="searchBox">
+        <div class="searchBoxContainer">
+            <a href="{%static 'javascript:void(0);' %}" class="closeBtn">
+                <svg id="Capa-1" viewBox="0 0 413.348 413.348" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="m413.348 24.354-24.354-24.354-182.32 182.32-182.32-182.32-24.354 24.354 182.32 182.32-182.32 182.32 24.354 24.354 182.32-182.32 182.32 182.32 24.354-24.354-182.32-182.32z" />
+                </svg>
+            </a>
+            <div class="search-bar-inner">
+                <input type="text" placeholder="Search here..." />
+                <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Header Start -->
+    <header class="sal-header-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2 col-md-4 col-sm-4 col-4">
+                    <div class="sal-logo">
+                        <a href=""><img src="{%static 'images/index5/logo.png' %}" alt="logo" /></a>
+                    </div>
+                </div>
+                <div class="col-lg-10 col-md-8 col-sm-8 col-8">
+                    <div class="sal-main-menu main-menu-parent">
+                        <!-- Header Menus -->
+                        <div class="sal-nav-items main-menu-wrapper text-right sal-menu-index">
+                            <ul>
+                                <li class="{% if "home" in request.path %}active{% endif %}">
+                                    <a href="/">Home</a>
+                                </li>
+                                <li class="{% if "service" in request.path %}active{% endif %}"><a
+                                        href="/service">Service</a></li>
+                                <li class="{% if "team" in request.path %}active{% endif %}"><a href="/team">Expert</a>
+                                </li>
+                                <li class="{% if "gallary" in request.path %}active{% endif %}"><a
+                                        href="/gallary">Work</a></li>
+
+                                        {% if request.session.email %}
+                                        {% else %}
+                                <li class="{% if "about" in request.path %}active{% endif %}"><a href="/about">About
+                                        Us</a></li>
+                                        {% endif %}
+                                <li class="{% if "contact" in request.path %}active{% endif %}"><a
+                                        href="/contact">Contact</a></li>
+
+                                {% if request.session.email %}
+                                <li class=""><a href="{% url 'logout' %}" style="color:red">Logout</a></li>
+                                {% endif %}
+
+
+                            </ul>
+                        </div>
+                        <div class="sal-search-wrap menu-btn-wrap">
+                            <ul class="display-flex">
+
+                                <li>
+                                    <a href="{%static 'javascript:void(0);' %}" class="sal-btn" data-toggle="modal"
+                                        data-target="#exampleModalCenter">
+                                        Book Now
+                                    </a>
+                                </li>
+                                <li>
+                                    {% if request.session.email %}
+                                    <a href="#" class="sal-btn" style="background-color: black;">
+                                        Welcome,{{request.session.name}}
+                                    </a>
+
+                                    {% else %}
+                                    <a href="{% url 'signup' %}" class="sal-btn">
+                                        Signup
+                                    </a>
+                                    {% endif %}
+                                </li>
+                                <li>
+                                    <a href="#" class="menu-btn">
+                                        <span>1</span>
+                                        <span>2</span>
+                                        <span>3</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    {% block body %}{% endblock body %}
+
+
+    <footer class="sal-footer-main-wrapper">
+        <div class="footer-information">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-12 col-12 mb-30 text-center">
+                        <div class="sal-widgets-contact">
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    preserveAspectRatio="xMidYMid" viewBox="0 0 40.062 40">
+                                    <path
+                                        d="M32.049,28.887 L39.862,38.730 C40.049,38.965 40.085,39.287 39.954,39.556 C39.824,39.827 39.550,39.998 39.250,39.998 L0.811,39.998 C0.511,39.998 0.238,39.827 0.107,39.556 C-0.023,39.287 0.012,38.965 0.199,38.730 L8.012,28.887 C8.160,28.700 8.385,28.591 8.624,28.591 L15.468,28.591 L9.625,19.428 C8.254,17.373 7.530,14.976 7.530,12.497 C7.530,5.605 13.138,-0.001 20.031,-0.001 C26.924,-0.001 32.531,5.605 32.531,12.497 C32.531,14.976 31.807,17.373 30.436,19.428 L24.593,28.591 L31.438,28.591 C31.676,28.591 31.901,28.700 32.049,28.887 ZM37.633,38.435 L34.967,35.075 L30.242,35.075 L32.909,38.435 L37.633,38.435 ZM30.914,38.435 L28.248,35.075 L11.814,35.075 L9.147,38.435 L30.914,38.435 ZM2.428,38.435 L7.153,38.435 L9.819,35.075 L5.095,35.075 L2.428,38.435 ZM9.001,30.154 L6.335,33.514 L11.059,33.514 L13.725,30.154 L9.001,30.154 ZM13.054,33.514 L18.606,33.514 L16.464,30.154 L15.720,30.154 L13.054,33.514 ZM29.123,18.580 C29.126,18.576 29.129,18.571 29.132,18.567 C30.334,16.768 30.969,14.669 30.969,12.497 C30.969,6.467 26.062,1.560 20.031,1.560 C13.999,1.560 9.093,6.467 9.093,12.497 C9.093,14.669 9.727,16.768 10.929,18.567 C10.932,18.571 10.935,18.576 10.938,18.580 C11.950,20.169 19.037,31.282 20.031,32.841 C20.426,32.222 28.610,19.385 29.123,18.580 ZM24.341,30.154 L23.597,30.154 L21.455,33.514 L27.007,33.514 L24.341,30.154 ZM26.336,30.154 L29.002,33.514 L33.727,33.514 L31.060,30.154 L26.336,30.154 ZM19.627,29.105 C19.258,28.882 19.139,28.402 19.361,28.032 L22.249,23.242 C22.472,22.872 22.952,22.753 23.322,22.977 C23.691,23.199 23.810,23.679 23.587,24.049 L20.700,28.839 C20.478,29.207 19.998,29.329 19.627,29.105 ZM24.718,20.310 C25.150,20.310 25.500,20.659 25.500,21.092 C25.500,21.523 25.150,21.873 24.718,21.873 C24.287,21.873 23.937,21.523 23.937,21.092 C23.937,20.659 24.287,20.310 24.718,20.310 ZM12.218,12.497 C12.218,8.190 15.723,4.685 20.031,4.685 C24.339,4.685 27.844,8.190 27.844,12.497 C27.844,16.837 24.320,20.310 20.031,20.310 C15.742,20.310 12.218,16.838 12.218,12.497 ZM26.281,12.497 C26.281,9.051 23.477,6.248 20.031,6.248 C16.584,6.248 13.780,9.051 13.780,12.497 C13.780,15.976 16.606,18.748 20.031,18.748 C23.454,18.748 26.281,15.976 26.281,12.497 Z" />
+                                </svg>
+                            </span>
+                            <h4>Location</h4>
+                            <div class="sal-footer-info-text">
+                                <a href="javascript:void(0);">13,part-4,opp.umiyanagar,<br> Khodiyar nagar Rd,Khodiyar
+                                    nagar, <br> Ahemdabad</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12 col-12 mb-30 text-center">
+                        <div class="sal-widgets-contact">
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    preserveAspectRatio="xMidYMid" viewBox="0 0 24.969 26">
+                                    <path
+                                        d="M24.376,12.318 C24.334,12.323 24.297,12.328 24.255,12.328 C23.911,12.328 23.610,12.075 23.552,11.714 C23.135,9.157 21.972,6.825 20.186,4.971 C18.400,3.121 16.154,1.909 13.692,1.475 C13.301,1.404 13.042,1.025 13.106,0.619 C13.174,0.219 13.539,-0.057 13.924,0.016 C16.683,0.503 19.193,1.853 21.190,3.927 C23.187,6.002 24.487,8.608 24.958,11.473 C25.026,11.873 24.762,12.257 24.376,12.318 ZM13.729,4.728 C15.404,5.024 16.931,5.848 18.141,7.105 C19.351,8.361 20.144,9.947 20.429,11.687 C20.493,12.092 20.234,12.476 19.843,12.543 C19.800,12.548 19.763,12.553 19.721,12.553 C19.378,12.553 19.076,12.301 19.018,11.939 C18.781,10.501 18.131,9.195 17.127,8.153 C16.123,7.110 14.865,6.430 13.481,6.188 C13.090,6.122 12.836,5.733 12.905,5.332 C12.973,4.932 13.338,4.663 13.729,4.728 ZM8.994,9.618 C8.603,10.029 8.202,10.458 7.768,10.869 C8.091,11.609 8.535,12.340 9.195,13.206 C10.558,14.946 11.980,16.290 13.544,17.321 C13.697,17.421 13.877,17.514 14.067,17.613 C14.199,17.684 14.336,17.755 14.474,17.832 L16.144,16.103 C16.677,15.550 17.301,15.259 17.951,15.259 C18.606,15.259 19.224,15.555 19.737,16.109 L22.638,19.133 C23.172,19.681 23.452,20.333 23.452,21.015 C23.452,21.688 23.177,22.348 22.654,22.913 C22.427,23.160 22.194,23.396 21.967,23.621 C21.634,23.955 21.317,24.268 21.042,24.614 C21.037,24.625 21.026,24.630 21.021,24.642 C20.218,25.546 19.193,26.002 17.972,26.002 C17.866,26.002 17.750,25.997 17.639,25.991 C15.827,25.870 14.204,25.162 12.989,24.564 C9.808,22.968 7.023,20.702 4.709,17.832 C2.801,15.450 1.522,13.228 0.667,10.830 C0.318,9.854 -0.137,8.361 -0.010,6.759 C0.075,5.765 0.460,4.910 1.137,4.208 L2.934,2.325 L2.944,2.314 C3.473,1.787 4.096,1.509 4.741,1.509 C5.385,1.509 5.998,1.787 6.511,2.314 C6.854,2.643 7.187,2.995 7.504,3.335 C7.663,3.511 7.832,3.686 7.996,3.856 L9.438,5.355 C10.548,6.506 10.548,7.999 9.438,9.151 C9.290,9.305 9.142,9.464 8.994,9.618 ZM8.434,6.402 L6.992,4.905 C6.823,4.723 6.654,4.548 6.490,4.372 C6.167,4.027 5.861,3.702 5.538,3.390 L5.523,3.373 C5.353,3.198 5.084,2.989 4.751,2.989 C4.482,2.989 4.207,3.126 3.948,3.379 L2.146,5.250 C1.707,5.706 1.470,6.238 1.417,6.879 C1.338,7.883 1.517,8.949 2.009,10.314 C2.807,12.553 4.012,14.638 5.813,16.894 C7.996,19.598 10.622,21.733 13.613,23.236 C14.706,23.779 16.165,24.416 17.734,24.521 C17.814,24.526 17.898,24.526 17.977,24.526 C18.802,24.526 19.430,24.247 19.964,23.653 C20.292,23.253 20.641,22.897 20.984,22.556 C21.211,22.326 21.423,22.118 21.629,21.887 C22.168,21.305 22.168,20.729 21.623,20.169 L18.701,17.135 C18.537,16.949 18.268,16.735 17.940,16.735 C17.608,16.735 17.322,16.960 17.142,17.146 L15.335,19.022 C15.245,19.116 14.971,19.401 14.532,19.401 C14.358,19.401 14.189,19.357 14.009,19.265 C13.988,19.253 13.967,19.237 13.946,19.225 C13.792,19.127 13.613,19.033 13.422,18.935 C13.211,18.825 12.989,18.709 12.772,18.568 C11.076,17.453 9.539,15.999 8.080,14.133 L8.075,14.128 C7.272,13.069 6.743,12.179 6.368,11.237 L6.352,11.187 C6.257,10.874 6.173,10.413 6.627,9.941 C6.633,9.931 6.643,9.925 6.654,9.914 C7.113,9.487 7.536,9.047 7.980,8.575 C8.133,8.421 8.281,8.262 8.434,8.103 C8.994,7.522 8.994,6.984 8.434,6.402 Z">
+                                    </path>
+                                </svg>
+                            </span>
+                            <h4>Contact Us</h4>
+                            <div class="sal-footer-info-text">
+                                <a href="javascript:void(0);">(+91) 90817 20202</a>
+                                <a href="javascript:void(0);">(+91) 99785 39762</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12 col-12 mb-30 text-center">
+                        <div class="sal-widgets-contact">
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    preserveAspectRatio="xMidYMid" viewBox="0 0 20 16">
+                                    <path
+                                        d="M13.104,7.998 L20.000,1.129 L20.000,14.868 L13.104,7.998 ZM1.135,-0.002 L18.865,-0.002 L10.000,8.829 L1.135,-0.002 ZM-0.000,14.868 L-0.000,1.129 L6.896,7.998 L-0.000,14.868 ZM10.000,11.091 L11.969,9.129 L18.865,15.998 L1.135,15.998 L8.031,9.129 L10.000,11.091 Z">
+                                    </path>
+                                </svg>
+                            </span>
+                            <h4>Email Us</h4>
+                            <div class="sal-footer-info-text">
+                                <a href="javascript:void(0);">trendsalon@gmail.com</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sal-footer-wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-12 col-12">
+                        <div class="sal-widgets mb-30">
+                            <div class="sal-logo mb-4">
+                                <a href="{%static 'index.html' %}"><img src="{%static 'images/index5/logo.png' %}"
+                                        alt="logo" /></a>
+                            </div>
+                            <div class="sal-footer-address">
+                                <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                                    magna aliqua Ut enim ad minim veniam, quis nostrud exercitation.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-sm-12 col-12">
+                        <div class="sal-widgets mb-30">
+                            <h4>Usefull information</h4>
+                            <ul>
+                                <li><a href="javascript:void(0)">Privacy Protection</a></li>
+                                <li><a href="javascript:void(0)">Safe Payments</a></li>
+                                <li><a href="javascript:void(0)">Terms of Services</a></li>
+                                <li><a href="javascript:void(0)">Documentation</a></li>
+                                <li><a href="javascript:void(0)">Support</a></li>
+                                <li><a href="javascript:void(0)">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-sm-12 col-12">
+                        <div class="sal-widgets mb-30">
+                            <h4>Helps Desk</h4>
+                            <ul>
+
+                                <li><a href="{% url 'service' %}">Services</a></li>
+                                <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                                <li><a href="{% url 'gallary' %}">Our Work</a></li>
+                                <li><a href="{% url 'team' %}">Our Team</a></li>
+                                <li><a href="{% url 'login' %}">Login</a></li>
+
+
+                            </ul>
+                            
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 col-12">
+                        <div class="sal-widgets mb-30">
+
+
+                            <h6>Call Now -</h6>
+                            <h5>+(91) 83380 20202</h5>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        </div>
+        <div class="sal-copyright-wrapper white">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-12 text-center">
+                <p>Copyright © 2021 <a class="white" href="javascript:void(0);">Trand</a>. All Right Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Book your Seat</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form method="POST" action="{% url 'appointment' %}" name="appform">
+                    {% csrf_token %}
+                    <div class="modal-body">
+
+                        <div class="calender-form">
+
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                                    <div class="sal-inputField">
+                                        <select class="form-control" name="barber">
+                                            <option>Select Barber</option>
+                                            {% for i in experts %}
+                                            <option>{{i.fullname}}</option>
+                                            {% endfor %}
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                                    <div class="sal-inputField">
+                                        <input type="date" placeholder="DOB" minDate:0 
+                                            name="date" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                                    <div class="sal-inputField">
+                                        <select class="form-control" name="time">
+                                            <option>Select Time</option>
+                                            <option>12:15</option>
+                                            <option>12:30</option>
+                                            <option>01:00</option>
+                                            <option>01:20</option>
+                                            <option>03:15</option>
+                                            <option>04:15</option>
+                                            <option>05:15</option>
+                                            <option>06:15</option>
+                                            <option>07:15</option>
+                                            <option>08:15</option>
+                                            <option>09:15</option>
+                                            <option>10:15</option>
+                                            <option>11:15</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                                    <div class="sal-inputField">
+                                        <select class="form-control" name="men_service">
+                                            <option>Men Service</option>
+                                            {% for i in service %}
+                                            {% if i.Service_Category.CategoryName == "Men Services" %}
+                                            <option value="{{i.Service_Name}}">{{i.Service_Name}} - {{i.Price}} ₹
+                                            </option>
+                                            {% endif %}
+
+                                            {% endfor %}
+
+                                        </select>
+                                    </div>
+                                </div> 
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                                    <div class="sal-inputField">
+                                        <select class="form-control" name="women_service">
+                                            <option>Woman Service</option>
+                                            {% for i in service %}
+                                            {% if i.Service_Category.CategoryName == "Women Services" %}
+                                            <option value="{{i.Service_Name}}">{{i.Service_Name}}</option>
+                                            {% endif %}
+                                            {% endfor %}
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                                    <div class="sal-inputField">
+                                        <input type="text" placeholder="Enter Your Name" name="name" />
+                                    </div>
+                                </div>
+                                
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                                    <div class="sal-inputField">
+                                        <input type="text" placeholder="Enter your Emali" name="email" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                                    <div class="sal-inputField">
+                                        <input type="text" placeholder="Enter Your Phone" name="phone">
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                                    <div class="sal-inputField">
+                                        <textarea placeholder="Drop Your Message..." name="message"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="sal-btn black-btn" data-dismiss="modal">Cancle</button>
+                        <button type="submit" class="sal-btn sal-nxt-btn" onclick="appointment()">Next</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function appointment(){
+            var name = appform.name.value;
+            console.write(name)
+        }
+    </script>
+
+    <!-- GO To Top -->
+
+    <!-- Script Start -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+
+    <script src="{%static 'js/swiper.min.js' %}"></script>
+    <script src="{%static 'js/SmoothScroll.min.js' %}"></script>
+    <!-- <script src="{%static 'js/jquery.magnific-popup.min.js' %}"></script> -->
+    <script src="{%static 'js/jquery.mixitup.min.js' %}"></script>
+    <script src="{%static 'js/bootstrap-datepicker.min.js' %}"></script>
+    <script src="{%static 'js/nice-select.min.js' %}"></script>
+    <script src="{%static 'js/custom.js' %}"></script>
+    
+</body>
+
+</html>

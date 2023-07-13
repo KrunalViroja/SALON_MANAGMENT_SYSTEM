@@ -1,0 +1,66 @@
+{% extends 'basic.html' %}
+{% load static %}
+{% block body %}
+    <!-- Main Wraapper -->
+    <div class="main-wrapper">
+        <!-- Page Title Start -->
+        <section class="page-title-wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-12 text-center">
+                        <div class="page-title-text">
+                            <h1>OTP Verification</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section Start -->
+        <section class="sal-contact-wrapper">
+            <div class="container">
+                <div class="row">
+                  <div class="col-lg-12 col-md-12 col-sm-12 col-12 mb-30">
+                    <div class="sal-contact-from">
+                        <h4 class="sal-title">OTP Verification</details></h4>
+                        <form action="{% url 'check_otp' %}" method="post">
+                          {% csrf_token %}
+                            <div class="row">
+                                
+                            <input type="hidden" value="{{gotp}}" name="gotp">
+                            <input type="hidden" value="{{email}}" name="email">
+                        
+                               
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                                    <div class="sal-inputField">
+                                        <input type="text" placeholder="Enter Your OTP" name="otp" />
+                                        <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                                
+                               
+                              
+                              
+                            </div>
+                                
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                                    <button type="submit" class="sal-btn submitForm">Verify</button>
+                                    <div class="response"></div>
+                                </div>
+                            </div>
+                        </form>
+                        <br>
+                       
+                        <p>Note : OTP Will Send On Your Email Id.</p>
+
+                      
+                    </div>
+                </div>
+                    
+                   
+                </div>
+            </div>
+        </section>
+    </div>
+{% endblock body %}
+    

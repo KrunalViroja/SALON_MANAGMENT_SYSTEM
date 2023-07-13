@@ -1,0 +1,73 @@
+{% extends 'basic.html' %}
+{% load static %}
+{% block body %}
+    <!-- Main Wraapper -->
+    <div class="main-wrapper">
+        <!-- Page Title Start -->
+        <section class="page-title-wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-12 text-center">
+                        <div class="page-title-text">
+                            <h1>Login</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section Start -->
+        <section class="sal-contact-wrapper">
+            <div class="container">
+                <div class="row">
+                  <div class="col-lg-6 col-md-6 col-sm-12 col-12 mb-30">
+                    <div class="sal-contact-from">
+                        <h4 class="sal-title">Login</details></h4>
+                        <form action="{% url 'login' %}" method="post">
+                          {% csrf_token %}
+                            <div class="row">
+                                {% if login_msg %}
+                               <p class="alert">{{login_msg}} </p>
+                               {% endif %}
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                                    <div class="sal-inputField">
+                                        <input type="email" placeholder="Enter Your Email" name="email" />
+                                        <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                                  <div class="sal-inputField">
+                                      <input type="password" placeholder="Enter Your Password" name="password">
+                                      <i class="fa fa-password" aria-hidden="true"></i>
+                                  </div>
+                              
+                              
+                            </div>
+                                
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                                    <button type="submit" class="sal-btn submitForm">Login</button>
+                                    <div class="response"></div>
+                                </div>
+                            </div>
+                        </form>
+                        <br>
+                        <p>Create New Account?<a href="{% url 'signup' %}"> Do Signup</a></p>
+                        <a href="#">Forget Password?</a>
+                        <p>Note : If you connect with us you grt best offer or best opportunity.</p>
+
+                      
+                    </div>
+                </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-12 mb-30">
+                        <div class="sal-contact-img">
+                            <img src="{% static 'images/index5/about-img.jpg' %}" alt="">
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+        </section>
+    </div>
+{% endblock body %}
+    

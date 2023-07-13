@@ -1,0 +1,127 @@
+{% extends 'basic.html' %}
+{% load static %}
+
+{% block body %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href=css/registration.css>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var a = document.getElementById("User_Name").value;
+    
+        if (a === "") {
+    
+            document.getElementById("Message").innerHTML = "** Please fill username";
+    
+            return false;
+    
+            {
+                if (a.length < 3) {
+    
+                    document.getElementById("Message").innerHTML = "ubername must be 3character";
+    
+                    return false;
+                }
+    
+    
+                if (a.length > 20) {
+    
+                    document.getElementById("Message").innerHTML = "username must be less than 20 character";
+    
+                    return false;
+    
+                }
+    
+                if (a.match(correct_way))
+    
+                    true;
+    
+                else {
+    
+                    document.getElementById("Message").innerHTML = "only alphabets are allowed";
+    
+                    return false;
+                }
+    
+    </script>
+</head>
+<title> Registration Page</title>
+
+<body>
+    
+
+    <div class="container">
+        <div class="title">Customer details</div>
+        <form action="#" onsubmit="return myFun()">
+            <div class="user-details">
+                <div class="input-box">
+                    <span class="details"><b>First Name</b></span>
+                    <input type="text" id="User_Name" value="" placeholder="Enter your name" pattern="^[a-zA-Z]+"
+                    title="First Name Should Contain Only Letters" required>
+                    <span id="Message"></span>
+                </div>
+                <div class="input-box">
+                    <span class="details"><b>Last name</b></span>
+                    <input type="text" placeholder="Enter your surname" pattern="^[a-zA-Z]+"
+                    title="First Name Should Contain Only Letters" required>
+                </div>
+                <div class="input-box">
+                    <span class="details"><b>Emali</b></span>
+                    <input type="text" placeholder="Enter your Emali" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                </div>
+                <div class="input-box">
+                    <span class="details"><b>Phone number</b></span>
+                    <input type="text" placeholder="Enter your Phone number" pattern="^[0-9]+" title="Mobile No Should Contain Only Numbers 0-9" required>
+                </div>
+                <div class="input-box">
+                    <span class="details"></span><b>Password</b></span>
+                    <input type="text" placeholder="Enter your password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                    title="Make sure it's at least 15 characters OR at least 8 characters including a number , uppercase and a lowercase letter." required>
+                </div>
+                <div class="input-box">
+                    <span class="details"><b>Comfirm password</b></span>
+                    <input type="text" placeholder="Enter your Comfirm password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                    title="Make sure it's at least 15 characters OR at least 8 characters including a number , uppercase and a lowercase letter." required>
+                </div>
+                <div class="input-box">
+                    <span class="details"><b>DOB</b></span>
+                    <input type="date" placeholder="Enter your Comfirm password" min="1940-01-01" max="2022-01-01"
+                        required>
+                </div>
+                <div class="input-box">
+                    <span class="details"><b> address </b></span>
+                    <textarea cols="40" rows="3" placeholder="Enter your address" required>
+                    </textarea>
+                </div>
+            </div>
+            <div class="gender-details">
+                <input type="radio" name="gender" id="dot-1">
+                <input type="radio" name="gender" id="dot-2">
+
+                <span class="gender-title"><b>Gender</b></span>
+                <div class="category">
+                    <label for="dot-1">
+                        <span class="dot one"></span>
+                        <span class="gender">Male</span>
+                    </label>
+                    <label for="dot-2">
+                        <span class="dot two"></span>
+                        <span class="gender">FeMale</span>
+                    </label>
+                </div>
+            </div>
+            <div class="button">
+                <input type="submit" value="Submit"></input>
+            </div>
+        </form>
+    </div>
+</body> 
+</html>
+
+{% endblock body %}
